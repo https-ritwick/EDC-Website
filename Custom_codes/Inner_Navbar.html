@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Navigation Bar</title>
+<style>
+    body {
+        font-family: Georgia, serif;
+        margin: 0;
+        padding: 0;
+    }
+    .navbar {
+        background-color: white;
+        color: #fff;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 20px;
+    }
+    .logo-left, .logo-right {
+        width: 100px;
+        height: 100px;
+    }
+    .logo-left img, .logo-right img {
+        max-width: 100%;
+        max-height: 100%;
+    }
+    .nav-list {
+        display: flex;
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        color: black;
+    }
+    .nav-item {
+        margin-right: 20px;
+        color: aqua;
+    }
+    .nav-item:last-child {
+        margin-right: 0;
+    }
+    .nav-link {
+        color: black;
+        text-decoration: none;
+        font-size: 16px;
+    }
+    .nav-item a:hover {
+      background-color: #FFA500;
+     color: black;
+    } 
+    .nav-item a.active {
+      background-color: dodgerblue;
+     color: white;
+    } 
+    .nav-item a {
+     display: inline-block;
+     color: #3c78d8;
+     text-align: center;
+     padding: 14px;
+     text-decoration: none;
+     font-size: 17px;
+     border-radius: 5px;
+    }        
+</style>
+</head>
+<body>
+
+<div class="navbar">
+    <div class="logo-left">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQY5IsQuTxITNjdPobO7Do1VkMh7BKy-Jwq0L9vuBG3Fw&s" alt="Left Logo" >
+    </div>
+    <ul class="nav-list">
+        <li class="nav-item"><a href="https://sites.google.com/view/ggsipuedc/academics/university-schools/usar/dean" class="nav-link" target="_self">Dean</a></li>
+        <li class="nav-item"><a href="https://sites.google.com/view/ggsipuedc/academics/university-schools/usar/faculty" class="nav-link">Faculty</a></li>
+        <li class="nav-item"><a href="https://sites.google.com/view/ggsipuedc/academics/list-of-programs" class="nav-link">List of Programs</a></li>
+        <li class="nav-item"><a href="https://sites.google.com/view/ggsipuedc/notice-board" class="nav-link">Notice Board</a></li>
+        <li class="nav-item"><a href="https://sites.google.com/view/ggsipuedc/academics/syllabusscheme" class="nav-link">Syllabus</a></li>
+        <li class="nav-item"><a href="https://sites.google.com/view/ggsipuedc/examinations/examination-results" class="nav-link">Examination Result</a></li>
+    </ul>
+    <div class="logo-right">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRBPijclwLg_8mvrSIoIde37xwGZ0xeyvt6rTHKS0MajA&s" alt="Right Logo"">
+    </div>
+</div>
+
+</body>
+</html>

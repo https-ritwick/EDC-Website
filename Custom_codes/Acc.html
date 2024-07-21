@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accordions 01</title>
+    <script>const cardsContainer = document.querySelector(".container");
+
+        cardsContainer.addEventListener("click", (e) => {
+          const target = e.target.closest(".card");
+        
+          if (!target) return;
+        
+          cardsContainer.querySelectorAll(".card").forEach((card) => {
+            card.classList.remove("active");
+          });
+        
+          target.classList.add("active");
+        });
+    </script>
+    <style>@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap");
+
+        *,
+        *::before,
+        *::after {
+          margin: 0;
+          padding: 0;
+          box-sizing: border-box;
+        }
+        
+        body {
+          font-family: Inter, sans-serif;
+          height: 100vh;
+          color: white;
+          background-color: #e9e9f0;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+        
+        img {
+          width: 100%;
+          height: 100%;
+          display: block;
+        }
+        
+        .container {
+          width: 100%;
+          width: 820px;
+          height: 340px;
+          display: flex;
+          gap: 10px;
+          margin-inline: 50px;
+        }
+        
+        .card {
+          min-width: 70px;
+          height: 100%;
+          border-radius: 30px;
+          overflow: hidden;
+        
+          display: flex;
+          align-items: flex-end;
+          flex-grow: 1;
+          cursor: pointer;
+          position: relative;
+          transition: flex-grow 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+        
+          --transition-timing: 0.35s;
+        }
+        /* .card.active {
+          flex-grow: 100;
+        } */
+        .card:hover {
+          flex-grow: 7;
+        }
+        
+        .card > .background {
+          position: absolute;
+          inset: 0;
+          object-fit: cover;
+          object-position: center;
+          filter: brightness(0.4);
+          z-index: -1;
+          transition: var(--transition-timing) ease;
+        }
+        .card:hover > .background {
+          filter: brightness(1);
+        }
+        
+        .card > .card-content {
+          display: flex;
+          align-items: center;
+          position: absolute;
+          left: 10px;
+          right: 10px;
+          bottom: 20px;
+          overflow: hidden;
+          transition: var(--transition-timing);
+          z-index: 10;
+        }
+        .card:hover > .card-content {
+          inset: 20px;
+          top: auto;
+        }
+        
+        .card-content > * {
+          transition: var(--transition-timing);
+        }
+        
+        .card-content > .profile-image {
+          min-width: 50px;
+          max-width: 50px;
+          height: 50px;
+          border: 1px solid white;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          border-radius: 50%;
+          overflow: hidden;
+        }
+        .card:hover .profile-image {
+          border: 1px solid rgb(110, 252, 205);
+        }
+        .profile-image > svg {
+          stroke: #fefefe;
+        }
+        .card:hover .profile-image > svg {
+          stroke: rgb(110, 252, 205);
+        }
+        
+        .card-content > .title {
+          white-space: pre;
+          margin-left: 10px;
+          translate: 0 100%;
+          opacity: 0;
+        }
+        .card:hover .title {
+          opacity: 1;
+          translate: 0 0;
+        }
+        
+        .card > .backdrop {
+          position: absolute;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          height: 100px;
+          z-index: 0;
+          background: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.7));
+        }button {
+ --color: #560bad;
+ font-family: inherit;
+ display: inline-block;
+ width: 8em;
+ height: 2.6em;
+ line-height: 2.5em;
+ margin: 20px;
+ position: relative;
+ overflow: hidden;
+ border: 2px solid var(--color);
+ transition: color .5s;
+ z-index: 1;
+ font-size: 17px;
+ border-radius: 6px;
+ font-weight: 500;
+ color: var(--color);
+}
+
+button:before {
+ content: "";
+ position: absolute;
+ z-index: -1;
+ background: var(--color);
+ height: 150px;
+ width: 200px;
+ border-radius: 50%;
+}
+
+button:hover {
+ color: #fff;
+}
+
+button:before {
+ top: 100%;
+ left: 100%;
+ transition: all .7s;
+}
+
+button:hover:before {
+ top: -30px;
+ left: -30px;
+}
+
+button:active:before {
+ background: #3a0ca3;
+ transition: background 0s;
+}
+
+
+        
+    </style>
+
+  </head>
+  <body>
+    <div class="container">
+      <div class="card">
+           <img class="background" src="https://lh4.googleusercontent.com/E6IPvy7KqcmMzMhKidCAkFTE672s4SxyJU35MRbJQqzpY_Zcck0d2FkU2x83eu4X3dzYHtdvACJFRb9yun4P7gg587izjqPseoiuIMvlb4vm2QgebLTmhnVvt1z4dk53Lg=w1280" alt="">
+
+        <div class="card-content">
+          <h3 class="title">Elysian 2.0 & Synesthesia 1.0</h3> 
+           &nbsp &nbsp &nbsp
+            <a href="https://drive.google.com/drive/folders/1n8oSfc1jshJKm1ahQ-WYNxGZel7y52rJ?usp=drive_link"><button>Photos/Videos</button></a>
+        </div>
+        
+        <div class="backdrop"></div>
+      </div>
+
+      <div class="card">
+        <img class="background" src="https://qph.cf2.quoracdn.net/main-qimg-2ab734f3da1f91b5b353398952fb7f39">
+        <div class="card-content">
+          <h3 class="title">National Science Day</h3> <br>
+          <h5 class="title">28th Feb 2024</h5>
+          &nbsp &nbsp &nbsp
+            <a href="https://drive.google.com/drive/folders/1v_tCQ1zcc61VMe8hazS3DS8xer2xLd15"><button> Photograph</button></a>
+        </div>
+        <div class="backdrop"></div>
+      </div>
+
+      <div class="card">
+        <img class="background" src="https://pbs.twimg.com/media/FyF5zCVXoAIdcQh.jpg:large" alt="">
+
+        <div class="card-content">
+          <h3 class="title">Inauguration of East Delhi Campus</h3> &nbsp;&nbsp;
+          <p> 8th June 2023</p>
+        </div>
+        <div class="backdrop"></div>
+      </div>
+
+      <div class="card">
+        <img class="background" src="https://lh5.googleusercontent.com/OJheKSeXbUBkTYLON9u-dwkaN1V8yVaS-zW_3lb9Yi5ox6buqRNXibLfJFY-55SSxyUvYJvPAHyBZCMjvk87i8mykQD9gpn2aCVoIFAff-L1wAZt0olLbpMIbDcHsWJUVA=w1280" alt="">
+
+        <div class="card-content">
+          <h3 class="title">Societies/Student Chapter</h3>
+          &nbsp &nbsp &nbsp
+          <a href="https://sites.google.com/view/ggsipuedc/students/societiesstudent-chapters"><button>Know More</button></a>
+        </div>
+        <div class="backdrop"></div>
+      </div>
+
+      <div class="card">
+        <img class="background" src="https://lh4.googleusercontent.com/KG8oFitWua8UbrqC_M3vqFnaybEQQ3v4EgYhFv4wYJiNxKdyZ-Ju598pl4WXNbAOhN5VoPz5zHtHUqlOm4YLr_Qldj2_Ec8k-onCoR2P3MRB8Q_29KoYuRP51rXJfzvDGA=w1280" alt="">
+
+        <div class="card-content">
+          <h3 class="title">Photo Gallery</h3>
+          &nbsp &nbsp &nbsp
+          <a href="https://sites.google.com/view/ggsipuedc/campus-life/photo-gallery"><button>Open</button></a>
+        </div>
+        <div class="backdrop"></div>
+      </div>
+      <div class="card">
+        <img class="background" src="https://lh5.googleusercontent.com/tfsdxn5RPAyTuOHIqbbPq-57LBqDAdaHSKfMljjZier2D4kMCeZJ3jN2TT2qLtFyrTIusz8r2XcTqS2Ir4qwyCbWt0P_kNJTz15SrqnONWOVv1STk2vktYncXgcK8Ns5vg=w1280" alt="">
+
+        <div class="card-content">
+          <h3 class="title">News/Events</h3>
+          &nbsp &nbsp &nbsp
+          <a href="https://sites.google.com/view/ggsipuedc/campus-life/newsevents"><button>Latest News</button></a>
+        </div>
+        <div class="backdrop"></div>
+      </div>
+    </div>
+  </body>
+</html>

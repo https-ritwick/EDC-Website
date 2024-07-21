@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tabs Example</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+
+<style>
+    #tab-button {
+    font-size: 17px;
+    padding: 0.5em 2em;
+    border: transparent;
+    box-shadow: 2px 2px 4px rgba(0,0,0,0.4);
+    background: dodgerblue;
+    color: white;
+    border-radius: 20px;
+   }
+   
+   #tab-button:hover {
+    background: rgb(2,0,36);
+    background: linear-gradient(90deg, rgba(30,144,255,1) 0%, rgba(0,212,255,1) 100%);
+   }
+   
+   #tab-button:active {
+    transform: translate(0em, 0.2em);
+   }
+    
+    #tab-heading{
+        font-family: "Montserrat", sans-serif;
+      
+      font-weight: 700;
+      font-style: bold;
+      text-align: center;
+      font-size: 32px;
+    }
+    #tab-para{
+        font-family: "Lato", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+        margin-top: 0%;
+        margin-left: 10%;
+        margin-right: 10%;
+        font-size: 18px;
+    }
+    .tab {
+        
+        display: none;
+    }
+    .tab-button {
+        background-color: #4CAF50;
+        border: none;
+        color: white;
+        padding: 10px 20px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin: 4px 2px;
+        cursor: pointer;
+        border-radius: 5px;
+        display: inline-flex;
+    }
+    .tab-content {
+        padding: 20px;
+        text-align: center;
+    }
+    .cta {
+      position: relative;
+      margin: auto;
+     padding: 12px 18px;
+     transition: all 0.2s ease;
+     border: none;
+     background: none;
+     cursor: pointer;
+     
+    }
+
+    .cta:before {
+     content: "";
+     position: absolute;
+     top: 0;
+     left: 0;
+     display: block;
+     border-radius: 50px;
+      background: #b1dae7;
+     width: 45px;
+     height: 45px;
+     transition: all 0.3s ease;
+   }
+
+    .cta span {
+      position: relative;
+     font-family: "Ubuntu", sans-serif;
+     font-size: 18px;
+     font-weight: 700;
+     letter-spacing: 0.05em;
+     color: #234567;
+    }
+
+    .cta svg {
+      position: relative;
+     top: 0;
+     margin-left: 10px;
+     fill: none;
+     stroke-linecap: round;
+     stroke-linejoin: round;
+     stroke: #234567;
+     stroke-width: 2;
+     transform: translateX(-5px);
+     transition: all 0.3s ease;
+    }
+
+    .cta:hover:before {
+     width: 100%;
+     background: #b1dae7;
+    }
+
+    .cta:hover svg {
+      transform: translateX(0);
+    }
+
+    .cta:active {
+      transform: scale(0.95);
+    }
+    
+
+</style>
+</head>
+<body>
+    <div class="tab-container">
+        <button id="tab-button"class="tab-button" onclick="openTab('tab1')">USAR</button>
+        <button id="tab-button"class="tab-button" onclick="openTab('tab2')">USDI</button>
+        <button id="tab-button"class="tab-button" onclick="openTab('tab3')">USAP</button>
+        
+    </div>
+    <div id="tab1" class="tab">
+        <h2 id="tab-heading">University School of Automation & Robotics (USAR)</h2>
+
+        <p id="tab-para"class="tab-content">The purpose of the school is to initiate continuous interaction with the industry, sharing the industry experiences, understanding industry needs and providing the required support to the corporate world, as well as opportunities to students to work in alliance with Industry. Facilities for students include well equipped library with books from diversified areas, periodicals and National & International Journals. The academic programmers are designed to enable growth and learning in a highly focused and application-based environment. This is achieved through a combination of formal lectures and hands-on experience in well equipped laboratories and through learning based projects. Creating environment of collaboration, experimentation, imagination and creativity is the goal of the school.information into tabbed sections that are easily switchable without leaving the page, it enhances user experience by decluttering the interface and making information accessible with minimal effort</p>
+        
+        <a href="https://sites.google.com/view/ggsipuedc/academics/university-schools/usar" target="_blank" class="know-more-button"><button class="cta">
+            <span>Know More</span>
+            <svg width="15px" height="10px" viewBox="0 0 13 10">
+              <path d="M1,5 L11,5"></path>
+              <polyline points="8 1 12 5 8 9"></polyline>
+            </svg>
+          </button>
+        </a>
+    </div>
+    <div id="tab2" class="tab">
+        <h2 id="tab-heading">University School of Design & Innovation (USDI)</h2>
+        
+        <p id="tab-para" class="tab-content">The University School of Design and Innovation (USDI) is established with a vision to be a hub for designing products, services systems, spaces, or experiences with a spirit of Inclusivity. The Inclusive design puts people with its environment in the center from the start of any design process and the fresh diverse perspectives are then nurtured. It aims to nurture design professionals who have a Human-Environment-Centered Design [HECD], an inclusive approach while designing and developing products, services, systems, spaces, or experiences.<br><br>
+
+            The School is situated in the newly built East Delhi Campus, of Guru Gobind Singh Indraprastha University, Delhi. It would be A unique institution to provide Design Education, rooted in values, that responds to social context, improves the quality of life, and prepares thought leaders to address emerging global needs<br><br>
+            
+            The University School of Design and Innovation, for the academic year 2022 -23, has planned for three programs at the Bachelors’ level namely – Industrial Design, Interaction Design, and Interior Design. The two programs at the Masters’ level are Industrial Design and Interior Design. The Bachelors of Design Courses are full-time undergraduate four-year programs and the Masters of Design are full-time graduate two-year programs. The four-year intensive program will include academic and “real-time” exposure along with site visits, case studies, educational trips providing hands-on experience to the students.</p>
+        <a href="https://sites.google.com/view/ggsipuedc/academics/university-schools/usdi" target="_blank" class="know-more-button"><button class="cta">
+             <span>Know More</span>
+                <svg width="15px" height="10px" viewBox="0 0 13 10">
+                  <path d="M1,5 L11,5"></path>
+                  <polyline points="8 1 12 5 8 9"></polyline>
+                </svg>
+            </button>
+        </a>
+    </div>
+    <div id="tab3" class="tab">
+        <h2 id="tab-heading">University School of Architecture & Planning (USAP)</h2>
+        
+        <p id="tab-para" class="tab-content">The school envisions to evolve as a Centre of academic excellence. It plans to develop a synergy between various conventional concepts, theories and applications of architectural and the contemporary challenges in the area of Urban and Regional planning, Building Management, Technology and Ecology. Thus minimizing risk and enhancing safety with focus on real life issues of Habitat management.<br><br>
+
+            
+            The school has adopted the teaching method of “learning by doing” whereby students are encouraged to critically reflect on contemporary challenges of rapidly developing technology based society with emphasis on heritage, conservation, development of new building typologies, critical issues of environmental sustainability and evolution of new technologies. The esteemed teachers of the school act as the guide and moderator to two-way teaching learning process within the classroom. The students are actively engaged to partake in relevant extra-curricular and co-curricular activities beyond the classroom. The focus of the school is to produce architect with an astute sense of responsibility and competence to face the evolving challenges of the society in ever innovating manner.<br><br>
+            
+            
+            University School of Architecture and Planning offers a Bachelor Degree Program in Architecture (B.Arch), which is a five year regular program.</p>
+        <a href="http://ipu.ac.in/usap/index.php" target="_blank" <button class="cta">
+            <span>Know More</span>
+            <svg width="15px" height="10px" viewBox="0 0 13 10">
+              <path d="M1,5 L11,5"></path>
+              <polyline points="8 1 12 5 8 9"></polyline>
+            </svg>
+        </button></a>
+    </div>
+    <script>
+        // Simulate a click on the "USAR" tab button when the page loads
+        window.onload = function() {
+            document.getElementById('tab1').style.display = 'block'; // Show the tab content
+            document.querySelector('button[data-tab="tab1"]').click(); // Simulate a click on the tab button
+        };
+    
+        function openTab(tabName) {
+            var i, tabs;
+            tabs = document.getElementsByClassName("tab");
+            for (i = 0; i < tabs.length; i++) {
+                tabs[i].style.display = "none";
+            }
+            document.getElementById(tabName).style.display = "block";
+        }
+    </script>
+    
+</body>
+</html>

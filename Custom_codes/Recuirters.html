@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Past Recruiters Carousel</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #e0e0e0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .carousel {
+            overflow: hidden;
+            width: 80%;
+            background-color: #fff;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+        }
+
+        .carousel-track {
+            display: flex;
+            animation: scroll 60s linear infinite; /* Increased duration */
+            will-change: transform;
+        }
+
+        .carousel-item {
+            min-width: 200px;
+            margin: 0 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: transform 0.3s;
+        }
+
+        .carousel-item img {
+            width: 150px; /* Fixed width */
+            height: 100px; /* Fixed height */
+            object-fit: contain;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .carousel-item:hover img {
+            transform: scale(1.1);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+        }
+
+        @keyframes scroll {
+            0% {
+                transform: translateX(0);
+            }
+            100% {
+                transform: translateX(calc(-200px * 30)); /* Adjusted for 30 items */
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="carousel">
+        <div class="carousel-track">
+            <div class="carousel-item"><img src="https://1000logos.net/wp-content/uploads/2021/04/Adobe-logo.png" alt="Adobe"></div>
+            <div class="carousel-item"><img src="https://cdn.logojoy.com/wp-content/uploads/20230629132639/current-logo-600x338.png" alt="Amazon"></div>
+            <div class="carousel-item"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/IBM_logo.svg/1024px-IBM_logo.svg.png" alt="IBM"></div>
+            <div class="carousel-item"><img src="https://images.samsung.com/is/image/samsung/assets/global/about-us/brand/logo/256_144_1.png?$512_N_PNG$" alt="Samsung"></div>
+            <div class="carousel-item"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR2xQcwKitRgXfqdi34DYlocPSEXD2G2zZipg&s" alt="AWS"></div>
+            <div class="carousel-item"><img src="https://1000logos.net/wp-content/uploads/2017/12/Hitachi-Logo.png" alt="Hitachi"></div>
+            <div class="carousel-item"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/Tata_logo.svg/1200px-Tata_logo.svg.png" alt="Tata"></div>
+            <div class="carousel-item"><img src="https://upload.wikimedia.org/wikipedia/commons/a/a0/Wipro_Primary_Logo_Color_RGB.svg" alt="Wipro"></div>
+            <div class="carousel-item"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fb/Bharti_Airtel_Logo.svg/800px-Bharti_Airtel_Logo.svg.png" alt="Bharti Airtel"></div>
+            <div class="carousel-item"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b1/Tata_Consultancy_Services_Logo.svg/2560px-Tata_Consultancy_Services_Logo.svg.png" alt="TCS"></div>
+            <div class="carousel-item"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Infosys_logo.svg/2560px-Infosys_logo.svg.png" alt="Infosys"></div>
+            <div class="carousel-item"><img src="https://logowik.com/content/uploads/images/vedantu9242.jpg" alt="Vedantu"></div>
+            <div class="carousel-item"><img src="https://i.pinimg.com/originals/db/42/53/db4253052cfc0f80ac281486c19f9d57.png" alt="PhonePe"></div>
+            <div class="carousel-item"><img src="https://logos-world.net/wp-content/uploads/2020/11/Flipkart-Logo.png" alt="Flipkart"></div>
+            <div class="carousel-item"><img src="https://w7.pngwing.com/pngs/110/280/png-transparent-paytm-standalone-hd-logo.png" alt="Paytm"></div>
+            <div class="carousel-item"><img src="https://1000logos.net/wp-content/uploads/2022/02/Vivo-Logo.jpg" alt="Vivo"></div>
+            <div class="carousel-item"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTqVYHKeBmM8N9YMgEUTvLiiZ-ctm4vq7XAKg&s" alt="Accenture"></div>
+            <div class="carousel-item"><img src="https://trademaklogos.s3.ap-south-1.amazonaws.com/5642056.jpeg" alt="PhysicsWallah"></div>
+            <div class="carousel-item"><img src="https://blog.practo.com/wp-content/uploads/2017/04/1.png" alt="Practo"></div>
+            <div class="carousel-item"><img src="https://repository-images.githubusercontent.com/389729275/371ba38b-8a03-4bff-916c-c3fa5396ceda" alt="GeeksforGeek"></div>
+            <!-- Duplicated for seamless effect -->
+            <div class="carousel-item"><img src="https://1000logos.net/wp-content/uploads/2021/04/Adobe-logo.png" alt="Adobe"></div>
+            <div class="carousel-item"><img src="https://cdn.logojoy.com/wp-content/uploads/20230629132639/current-logo-600x338.png" alt="Amazon"></div>
+            <div class="carousel-item"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/IBM_logo.svg/1024px-IBM_logo.svg.png" alt="IBM"></div>
+            <div class="carousel-item"><img src="https://images.samsung.com/is/image/samsung/assets/global/about-us/brand/logo/256_144_1.png?$512_N_PNG$" alt="Samsung"></div>
+            <div class="carousel-item"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR2xQcwKitRgXfqdi34DYlocPSEXD2G2zZipg&s" alt="AWS"></div>
+            <div class="carousel-item"><img src="https://1000logos.net/wp-content/uploads/2017/12/Hitachi-Logo.png" alt="Hitachi"></div>
+            <div class="carousel-item"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/Tata_logo.svg/1200px-Tata_logo.svg.png" alt="Tata"></div>
+            <div class="carousel-item"><img src="https://upload.wikimedia.org/wikipedia/commons/a/a0/Wipro_Primary_Logo_Color_RGB.svg" alt="Wipro"></div>
+            <div class="carousel-item"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fb/Bharti_Airtel_Logo.svg/800px-Bharti_Airtel_Logo.svg.png" alt="Bharti Airtel"></div>
+            <div class="carousel-item"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b1/Tata_Consultancy_Services_Logo.svg/2560px-Tata_Consultancy_Services_Logo.svg.png" alt="TCS"></div>
+            <div class="carousel-item"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Infosys_logo.svg/2560px-Infosys_logo.svg.png" alt="Infosys"></div>
+            <div class="carousel-item"><img src="https://logowik.com/content/uploads/images/vedantu9242.jpg" alt="Vedantu"></div>
+            <div class="carousel-item"><img src="https://i.pinimg.com/originals/db/42/53/db4253052cfc0f80ac281486c19f9d57.png" alt="PhonePe"></div>
+            <div class="carousel-item"><img src="https://logos-world.net/wp-content/uploads/2020/11/Flipkart-Logo.png" alt="Flipkart"></div>
+            <div class="carousel-item"><img src="https://w7.pngwing.com/pngs/110/280/png-transparent-paytm-standalone-hd-logo.png" alt="Paytm"></div>
+            <div class="carousel-item"><img src="https://1000logos.net/wp-content/uploads/2022/02/Vivo-Logo.jpg" alt="Vivo"></div>
+            <div class="carousel-item"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTqVYHKeBmM8N9YMgEUTvLiiZ-ctm4vq7XAKg&s" alt="Accenture"></div>
+            <div class="carousel-item"><img src="https://trademaklogos.s3.ap-south-1.amazonaws.com/5642056.jpeg" alt="PhysicsWallah"></div>
+            <div class="carousel-item"><img src="https://blog.practo.com/wp-content/uploads/2017/04/1.png" alt="Practo"></div>
+            <div class="carousel-item"><img src="https://repository-images.githubusercontent.com/389729275/371ba38b-8a03-4bff-916c-c3fa5396ceda" alt="GeeksforGeek"></div>
+        </div>
+    </div>
+</body>
+</html>
