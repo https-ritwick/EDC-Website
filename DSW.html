@@ -1,0 +1,626 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Directorate of Students’ Welfare – East Delhi Campus</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+ <style>
+  body { font-family: 'Public Sans', sans-serif; }
+  html { scroll-behavior: smooth; }
+
+  /* Change only this URL to update the hero image */
+  :root {
+    --dsw-hero-bg: url("https://github.com/https-ritwick/EDC-Website/blob/main/Img/DSC_8603.jpg?raw=true");
+  }
+
+  .hero-bg {
+    position: relative;
+    background-image: var(--dsw-hero-bg);
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+  }
+
+  /* Dark overlay to make white text pop, no blue tint */
+  .hero-bg::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.35),
+      rgba(0, 0, 0, 0.65)
+    );
+  }
+
+  .hero-content {
+    position: relative; /* keeps content above the overlay */
+  }
+    .nav-link-active {
+      background-color: #1d4ed8;
+      color: #ffffff;
+    }
+    .nav-link-inactive {
+      color: #1f2933;
+      background-color: #e5e7eb;
+    }
+  </style>
+</head>
+<body class="bg-gray-50 text-gray-900">
+
+  <!-- STICKY HEADER + INTERNAL NAV -->
+  <header class="bg-white shadow-md border-b border-blue-100 sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto px-4 py-3 flex justify-between items-center">
+      <!-- left logo + title -->
+      <div class="flex items-center gap-3">
+        <img src="https://upload.wikimedia.org/wikipedia/en/thumb/b/b8/GGSIU_logo.svg/1200px-GGSIU_logo.svg.png"
+             class="h-12 md:h-14"
+             alt="Guru Gobind Singh Indraprastha University Logo">
+        <div>
+          <p class="text-[10px] md:text-xs tracking-wide text-gray-500 uppercase">Directorate of Students’ Welfare</p>
+          <h1 class="text-base md:text-xl font-bold text-blue-900 leading-tight">Guru Gobind Singh Indraprastha University</h1>
+          <p class="text-[11px] md:text-xs text-gray-500">East Delhi Campus</p>
+        </div>
+      </div>
+      <!-- right logo -->
+      <div class="hidden md:block">
+        <img src="https://github.com/https-ritwick/Reporting-Management-System/blob/main/static/img/Logo/new_logo_withoutbg.png?raw=true"
+             class="h-12 md:h-14"
+             alt="IPU Logo Right">
+      </div>
+    </div>
+
+    <!-- internal nav tabs -->
+    <nav class="border-t border-blue-50 bg-white">
+      <div class="max-w-7xl mx-auto px-2 md:px-4 py-2 flex flex-wrap gap-2 md:gap-3">
+        <button data-target="about"   class="nav-link nav-link-active px-3 md:px-4 py-1.5 rounded-full text-xs md:text-sm font-semibold">About Us</button>
+        <button data-target="srijan"  class="nav-link nav-link-inactive px-3 md:px-4 py-1.5 rounded-full text-xs md:text-sm font-semibold">Srijan Clubs</button>
+        <button data-target="sports"  class="nav-link nav-link-inactive px-3 md:px-4 py-1.5 rounded-full text-xs md:text-sm font-semibold">Sports</button>
+        <button data-target="council" class="nav-link nav-link-inactive px-3 md:px-4 py-1.5 rounded-full text-xs md:text-sm font-semibold">Student Council</button>
+        <button data-target="contact" class="nav-link nav-link-inactive px-3 md:px-4 py-1.5 rounded-full text-xs md:text-sm font-semibold">Contact Us</button>
+           <a href="http://ipu.ac.in/dsw.php"
+       target="_blank" rel="noopener"
+       class="px-3 md:px-4 py-1.5 rounded-full text-xs md:text-sm font-semibold text-blue-700 bg-blue-50 hover:bg-blue-100">
+      DSW Notices
+    </a>
+        
+      </div>
+    </nav>
+  </header>
+
+  <!-- HERO / ABOUT -->
+  <section id="about" class="hero-bg text-white">
+  <div class="hero-content max-w-7xl mx-auto px-4 py-10 md:py-14 min-h-[200vh] flex items-center">
+    <div class="md:w-3/4 space-y-3 md:space-y-4">
+      <p class="inline-block bg-white/15 border border-white/20 px-3 py-1 rounded-full text-[11px] font-semibold">
+        Directorate of Students’ Welfare – East Delhi Campus
+      </p>
+      <h2 class="text-3xl md:text-4xl font-bold">
+        Towards Holistic Growth of Every Student
+      </h2>
+      <p class="text-sm md:text-base text-gray-100 leading-relaxed">
+        The Directorate of Students Welfare was established to provide opportunities and adequate
+        amenities for the all-round development of personality and leadership qualities among
+        students of Guru Gobind Singh Indraprastha University.
+      </p>
+      <p class="text-xs md:text-sm text-gray-100">
+        Through scholarships, cultural and sports activities, student clubs and welfare initiatives,
+        DSW nurtures responsible, confident and socially sensitive graduates.
+      </p>
+    </div>
+  </div>
+</section>
+  <!-- ABOUT – DETAILS -->
+  <section class="max-w-7xl mx-auto px-4 py-10">
+    <div class="grid md:grid-cols-2 gap-6">
+      <div class="bg-white rounded-xl shadow p-5 md:p-6">
+        <h3 class="text-lg font-semibold text-blue-900 mb-3">Activities of DSW</h3>
+        <ul class="list-disc list-inside text-sm space-y-1.5 text-gray-700">
+          <li>Financial assistance to students belonging to the Economically Weaker Section (EWS).</li>
+          <li>Merit-cum-Means linked financial assistance to meritorious and needy students of Govt. of NCT of Delhi.</li>
+          <li>Travel Grant for participation in academic / cultural / sports events in India and abroad – covering travel, visa, registration and per diem as per University rules.</li>
+          <li>Seminar Grants to affiliated institutes of the University.</li>
+          <li>Educational / Excursion Tours for students of University Schools and Centres within India.</li>
+          <li>Financial assistance for Freshers’ and Farewell functions of University Schools.</li>
+          <li>Annual Cultural Fest <strong>“Anugoonj”</strong> (February) and Annual Inter-Collegiate Sports Meet (October).</li>
+          <li>Participation of University teams in tournaments organised by the <strong>Association of Indian Universities (AIU)</strong>.</li>
+          <li>Cultural activities in association with <strong>SPIC MACAY</strong> and other cultural organisations.</li>
+          <li>Formation and monitoring of student clubs under <strong>Srijan – Indraprastha Society for Creative Expressions</strong>.</li>
+        </ul>
+      </div>
+      <div class="bg-white rounded-xl shadow p-5 md:p-6">
+        <h3 class="text-lg font-semibold text-blue-900 mb-3">Clubs & Facilities</h3>
+        <p class="text-sm text-gray-700 mb-3">
+          Under the banner of <strong>Srijan</strong>, multiple cultural and co-curricular clubs are constituted to
+          provide platforms for music, dance, literature, fine arts, theatre, photography, social outreach and more.
+        </p>
+        <p class="text-sm text-gray-700 mb-2 font-semibold">Sports Facilities:</p>
+        <ul class="list-disc list-inside text-sm text-gray-700 space-y-1">
+          <li>Dedicated courts and fields for Volleyball, Football, Cricket, Badminton, Basketball, Tennis, Kabaddi and Track &amp; Field.</li>
+          <li>Open ground and canopy for cultural activities by clubs under Srijan.</li>
+          <li>Coaching &amp; training under qualified and experienced coaches for major sports such as Football, Volleyball, Basketball, Tennis, Badminton, Kabaddi, Tug-of-War, Cricket, Track &amp; Field, Yoga, Music and Dance.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- SRIJAN CLUBS -->
+  <section id="srijan" class="max-w-7xl mx-auto px-4 py-10">
+    <div class="bg-white rounded-xl shadow p-5 md:p-6">
+      <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-4 mb-4">
+        <div>
+          <h2 class="text-2xl font-bold text-blue-900 mb-1">Srijan Clubs – East Delhi Campus</h2>
+          <p class="text-sm text-gray-700">
+            Srijan provides students with spaces to explore creativity, culture, social responsibility and leadership.
+            Below is a structured list of clubs. Each card is ready for East Campus faculty coordinators and
+            student office bearers for the current academic session.
+          </p>
+        </div>
+       <!----<div class="text-xs text-gray-500 bg-blue-50 border border-blue-100 rounded-lg px-3 py-2">
+          Tip: To update data later, edit the <code>srijanClubs</code> array in the script at the bottom of this embed.
+        </div>-->
+      </div>
+
+      <!-- club cards injected by JS -->
+      <div id="srijanGrid" class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-5"></div>
+    </div>
+  </section>
+
+  <!-- SPORTS SECTION -->
+  <section id="sports" class="max-w-7xl mx-auto px-4 py-10">
+    <div class="bg-white rounded-xl shadow p-5 md:p-6 space-y-6">
+      <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+        <div>
+          <h2 class="text-2xl font-bold text-blue-900 mb-1">Sports – East Delhi Campus</h2>
+          <p class="text-sm text-gray-700">
+            Sports and physical fitness are integral to student life at GGSIPU. The Sports Club of East Delhi Campus
+            co-ordinates events, practice sessions and participation in University and AIU tournaments.
+          </p>
+        </div>
+        <div class="bg-blue-50 border border-blue-100 rounded-lg px-4 py-3 text-xs text-gray-700">
+          Annual Inter-Collegiate Sports Meet is organised in the month of <strong>October</strong>; major
+          athletic and team events are held at University level.
+        </div>
+      </div>
+
+      <div class="grid md:grid-cols-2 gap-6">
+        <!-- Activities / Facilities -->
+        <div>
+          <h3 class="text-lg font-semibold text-blue-900 mb-2">Sports Activities</h3>
+          <p class="text-sm text-gray-700 mb-2">
+            Inter-Collegiate tournaments are organised for various sports, with active participation from all affiliated
+            institutes and University Schools. University teams also participate in National, State and University level tournaments.
+          </p>
+
+          <h4 class="text-sm font-semibold text-gray-800 mt-4 mb-1">Major Events</h4>
+          <ul class="list-disc list-inside text-sm text-gray-700 space-y-1">
+            <li>Volleyball (Men &amp; Women)</li>
+            <li>Football (Men &amp; Women)</li>
+            <li>Discus Throw &amp; Shot Put (Men &amp; Women)</li>
+            <li>Track events – 100m, 200m, 400m, 500m (Men &amp; Women)</li>
+            <li>Cross Country Race &amp; Long Jump (Men &amp; Women)</li>
+            <li>Tug of War (Men &amp; Women)</li>
+            <li>Cricket, Basketball, Badminton, Kabaddi</li>
+            <li>Body Building, Weightlifting / Power Lifting, Tennis</li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="text-lg font-semibold text-blue-900 mb-2">Coaching &amp; Training Facilities</h3>
+          <p class="text-sm text-gray-700 mb-2">
+            Special coaching and training is provided under the guidance of qualified and experienced coaches
+            for the following disciplines:
+          </p>
+          <ul class="list-disc list-inside text-sm text-gray-700 space-y-1">
+            <li>Football, Volleyball, Basketball, Tennis, Badminton, Kabaddi, Tug-of-War</li>
+            <li>Cricket, Track &amp; Field, Yoga</li>
+            <li>Music and Dance (for cultural competitions)</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- SPORTS CLUB OFFICE BEARERS -->
+      <div class="border-t border-gray-100 pt-4">
+        <h3 class="text-lg font-semibold text-blue-900 mb-3">Sports Club – Office Bearers (2024–25)</h3>
+        <div class="overflow-x-auto rounded-lg border border-gray-100">
+          <table class="min-w-full text-sm">
+            <thead class="bg-blue-50 text-left">
+              <tr>
+                <th class="px-3 py-2">Post</th>
+                <th class="px-3 py-2">Name</th>
+                <th class="px-3 py-2">Course / USS</th>
+                <th class="px-3 py-2">Enrollment No.</th>
+                <th class="px-3 py-2">Year</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="border-t">
+                <td class="px-3 py-2 font-semibold">President</td>
+                <td class="px-3 py-2">Dhairya Singh</td>
+                <td class="px-3 py-2">B.Tech (Artificial Intelligence & Machine Learning)</td>
+                <td class="px-3 py-2">06219051622</td>
+                <td class="px-3 py-2">3rd Year</td>
+              </tr>
+              <tr class="border-t">
+                <td class="px-3 py-2 font-semibold">Vice President</td>
+                <td class="px-3 py-2">Piyush Kharb</td>
+                <td class="px-3 py-2">B.Tech (Automation & Robotics)</td>
+                <td class="px-3 py-2">01119072023</td>
+                <td class="px-3 py-2">3rd Year</td>
+              </tr>
+              <tr class="border-t">
+                <td class="px-3 py-2 font-semibold">Secretary</td>
+                <td class="px-3 py-2">Doli Singh</td>
+                <td class="px-3 py-2">B.Tech (Industrial Internet of Things)</td>
+                <td class="px-3 py-2">08519051722</td>
+                <td class="px-3 py-2">3rd Year</td>
+              </tr>
+              <tr class="border-t">
+                <td class="px-3 py-2 font-semibold">Joint Secretary</td>
+                <td class="px-3 py-2">Vijul Ahuja</td>
+                <td class="px-3 py-2">B.Tech (Artificial Intelligence & Data Science)</td>
+                <td class="px-3 py-2">240310241084</td>
+                <td class="px-3 py-2">1st Year</td>
+              </tr>
+              <tr class="border-t">
+                <td class="px-3 py-2 font-semibold">Chief Executive</td>
+                <td class="px-3 py-2">Mohd. Daniyal</td>
+                <td class="px-3 py-2">B.Tech (Automation & Robotics)</td>
+                <td class="px-3 py-2">06919052023</td>
+                <td class="px-3 py-2">2nd Year</td>
+              </tr>
+              <tr class="border-t">
+                <td class="px-3 py-2 font-semibold">Treasurer</td>
+                <td class="px-3 py-2">Shashwat Kumar</td>
+                <td class="px-3 py-2">B.Tech (Industrial Internet of Things)</td>
+                <td class="px-3 py-2">04019051723</td>
+                <td class="px-3 py-2">2nd Year</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <!---- <p class="text-[11px] text-gray-500 mt-2">
+          (You can edit enrolment numbers / years above if any correction is required.)
+        </p>--->
+      </div>
+    </div>
+  </section>
+
+  <!-- STUDENT COUNCIL (ANCHOR SECTION) -->
+  <section id="council" class="max-w-7xl mx-auto px-4 py-10">
+    <div class="bg-white rounded-xl shadow p-5 md:p-6">
+      <h2 class="text-2xl font-bold text-blue-900 mb-2">Student Council – East Delhi Campus</h2>
+      <p class="text-sm text-gray-700 mb-3">
+        The Student Council comprises School Representatives (SRs) and Class Representatives (CRs) from
+        USAR, USDI, USAP and USMC. The detailed list of Student Council members for the current academic
+        session is available on the dedicated Student Council page.
+      </p>
+      <a href="https://sites.google.com/view/ggsipuedc/students/student-council"
+         target="_blank"
+         class="inline-flex items-center text-sm font-semibold text-white bg-blue-700 hover:bg-blue-800 px-4 py-2 rounded-full">
+        View Full Student Council
+      </a>
+      <!---<p class="text-[11px] text-gray-500 mt-2">
+        (If you embed the full Council table inside this page instead, you can replace this paragraph with that section.)
+      </p>--->
+    </div>
+    </section>
+    <section class="max-w-7xl mx-auto px-4 py-10">
+       <h2 class="text-2xl font-bold text-blue-900 mb-2">Contact Us</h2> 
+      <div class="bg-white rounded-2xl shadow p-6 border border-blue-100 flex gap-4 items-center">
+        <div class="flex-shrink-0">
+          <div class="h-16 w-16 rounded-full bg-blue-100 flex items-center justify-center text-blue-900 font-bold text-xl">
+            RJ
+          </div>
+        </div>
+        <div>
+          <h3 class="text-lg font-semibold text-blue-900">Dr. Rahul Johari</h3>
+          <p class="text-sm text-gray-700">
+            Associate Director, Directorate of Students’ Welfare
+          </p>
+          <p class="text-xs text-gray-500 mt-1">
+            Guru Gobind Singh Indraprastha University, East Delhi Campus
+          </p>
+        </div>
+      </div>
+    </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="bg-gray-900 text-white mt-10">
+    <div class="max-w-7xl mx-auto px-4 py-10 grid grid-cols-1 md:grid-cols-3 gap-6">
+      <div>
+        <h3 class="text-lg font-bold mb-2">Directorate of Students’ Welfare</h3>
+        <p class="text-sm text-gray-200">
+          The Directorate works to support the welfare, creativity and holistic development of students
+          through scholarships, clubs, sports, cultural activities and student support initiatives.
+        </p>
+      </div>
+      <div>
+        <h3 class="text-lg font-bold mb-2">Campus</h3>
+        <p class="text-sm text-gray-200">
+          Directorate of Students’ Welfare (EDC)<br/>
+          Room A-214, A-Block, East Delhi Campus<br/>
+          Surajmal Vihar, Delhi – 110032
+        </p>
+      </div>
+      <div>
+        <h3 class="text-lg font-bold mb-2">Contact</h3>
+        <p class="text-sm text-gray-200">
+          Associate Director (DSW, EDC):<br/>
+          <span class="font-semibold">Dr. Rahul Johari</span>
+        </p>
+        <p class="text-sm text-gray-200 mt-2">
+          Email: <span class="underline">rahul@ipu.ac.in</span>
+        </p>
+        <p class="text-xs text-gray-400 mt-3">
+          For club-specific queries, students may contact respective Faculty Coordinators or student office bearers.
+        </p>
+      </div>
+    </div>
+    <div class="bg-gray-800 text-center text-xs md:text-sm py-3">
+      © Directorate of Students’ Welfare, Guru Gobind Singh Indraprastha University – East Delhi Campus
+    </div>
+  </section>
+
+  <!-- SCRIPT: NAV + SRIJAN RENDERING -->
+  <script type="text/javascript">
+    // Smooth scroll & active state for internal nav
+    const navButtons = document.querySelectorAll(".nav-link");
+    navButtons.forEach(btn => {
+      btn.addEventListener("click", () => {
+        const targetId = btn.getAttribute("data-target");
+        const section = document.getElementById(targetId);
+        if (section) {
+          section.scrollIntoView({ behavior: "smooth" });
+        }
+      });
+    });
+
+    // Highlight active tab on scroll
+    const sections = ["about", "srijan", "sports", "council", "notices", "contact"]
+      .map(id => document.getElementById(id));
+
+    window.addEventListener("scroll", () => {
+      const scrollPos = window.scrollY || window.pageYOffset;
+      let currentId = "about";
+      sections.forEach(sec => {
+        if (sec && scrollPos + 110 >= sec.offsetTop) {
+          currentId = sec.id;
+        }
+      });
+      navButtons.forEach(btn => {
+        if (btn.getAttribute("data-target") === currentId) {
+          btn.classList.remove("nav-link-inactive");
+          btn.classList.add("nav-link-active");
+        } else {
+          btn.classList.remove("nav-link-active");
+          btn.classList.add("nav-link-inactive");
+        }
+      });
+    });
+
+    // Srijan Clubs data
+    const srijanClubs = [
+      { code: "MUSIC", name: "Music Club", facultyEast: ["Dr. Ashish Joshi, Assistant Professor, USAR", "Dr. Anirban Dandapat, Assistant Professor, USAR"], officeBearers: [
+        {post: "Chair", name: "…", course: "…", year: "…"},
+            {post: "Vice-Chair", name: "…", course: "…", year: "…"},
+            {post: "Secretary", name: "…", course: "…", year: "…" },
+            {post: "Joint-Secretary", name: "…", course: "…", year: "…" },
+            {post: "Treasurer", name: "…", course: "…", year: "…" }
+         ] 
+        },
+      { code: "DANCE", name: "Dance Club", facultyEast: ["Dr. Khyati Chopra, Assistant Professor, USAR", "Dr. Neeta Singh, Assistant Professor, USAR", "Dr. Sanjay Kumar Singh, Assistant Professor, USAR"], officeBearers: [
+        {post: "Chair", name: "…", course: "…", year: "…"},
+            {post: "Vice-Chair", name: "…", course: "…", year: "…"},
+            {post: "Secretary", name: "…", course: "…", year: "…" },
+            {post: "Joint-Secretary", name: "…", course: "…", year: "…" },
+            {post: "Treasurer", name: "…", course: "…", year: "…" }
+      ] },
+      { code: "DRAMS", name: "Dramatics Club", facultyEast: [ "Dr. Kulveen Trehan, Associate Professor, USMC",
+      "Sh. Sourav Sil, Assistant Professor, USDI",
+      "Sh. Kartikeya Chandra, Assistant Professor, USDI"], officeBearers: [
+        {post: "Chair", name: "…", course: "…", year: "…"},
+            {post: "Vice-Chair", name: "…", course: "…", year: "…"},
+            {post: "Secretary", name: "…", course: "…", year: "…" },
+            {post: "Joint-Secretary", name: "…", course: "…", year: "…" },
+            {post: "Treasurer", name: "…", course: "…", year: "…" }
+      ] },
+      { code: "FA",    name: "Fine Arts Club", facultyEast: [      "Dr. Sonali Roy Chandra, Assistant Professor, USAP",
+      "Dr. Rajendra Kumar Arya, Assistant Professor, USAR",
+      "Ms. Komal Verma, Assistant Professor, USDI"], officeBearers: [
+        {post: "Chair", name: "…", course: "…", year: "…"},
+            {post: "Vice-Chair", name: "…", course: "…", year: "…"},
+            {post: "Secretary", name: "…", course: "…", year: "…" },
+            {post: "Joint-Secretary", name: "…", course: "…", year: "…" },
+            {post: "Treasurer", name: "…", course: "…", year: "…" }
+      ] },
+      { code: "LIT",   name: "Literary Club", facultyEast: [ "Ms. Chetana Hooda, Assistant Professor, USAR"], officeBearers: [
+        {post: "Chair", name: "…", course: "…", year: "…"},
+            {post: "Vice-Chair", name: "…", course: "…", year: "…"},
+            {post: "Secretary", name: "…", course: "…", year: "…" },
+            {post: "Joint-Secretary", name: "…", course: "…", year: "…" },
+            {post: "Treasurer", name: "…", course: "…", year: "…" }
+      ] },
+      { code: "PHOTO", name: "Photography & Film Club", facultyEast: [     "Sh. Vinay Shankar, Assistant Professor, USMC",
+      "Dr. Nikhilesh Sharma, Assistant Professor, USDI",
+      "Dr. Sumat Sharma, Assistant Professor, USAP", "Dr. Riyaz Arshad Nazish, Producer (TV), USMC"], officeBearers: [
+        {post: "Chair", name: "…", course: "…", year: "…"},
+            {post: "Vice-Chair", name: "…", course: "…", year: "…"},
+            {post: "Secretary", name: "…", course: "…", year: "…" },
+            {post: "Joint-Secretary", name: "…", course: "…", year: "…" },
+            {post: "Treasurer", name: "…", course: "…", year: "…" }
+      ] },
+      { code: "SCI",   name: "Science Club", facultyEast: [ "Dr. Mahesh Chand, Assistant Professor, USAR",
+      "Dr. Pooja Rana, Assistant Professor, USAR"], officeBearers: [
+       {post: "Chair", name: "…", course: "…", year: "…"},
+            {post: "Vice-Chair", name: "…", course: "…", year: "…"},
+            {post: "Secretary", name: "…", course: "…", year: "…" },
+            {post: "Joint-Secretary", name: "…", course: "…", year: "…" },
+            {post: "Treasurer", name: "…", course: "…", year: "…" }
+      ] },
+      { code: "NAT",   name: "Nature Club", facultyEast: [ "Dr. Deepak Tripathi, Assistant Professor, USAR",
+      "Dr. Amar Arora, Assistant Professor, USAR",
+      "Dr. Jyoti Singh, Assistant Professor, USAP"], officeBearers: [
+        {post: "Chair", name: "…", course: "…", year: "…"},
+            {post: "Vice-Chair", name: "…", course: "…", year: "…"},
+            {post: "Secretary", name: "…", course: "…", year: "…" },
+            {post: "Joint-Secretary", name: "…", course: "…", year: "…" },
+            {post: "Treasurer", name: "…", course: "…", year: "…" }
+      ] },
+      { code: "HERIT", name: "Heritage Club", facultyEast: [    "Dr. Bindo Ranjan, Associate Professor, USDI",
+    "Dr. Rekha Bhaskaran, Associate Professor, USAP",
+    "Dr. Amit Choudhary, Assistant Professor, USAR",
+    "Dr. Nanki Nath, Assistant Professor, USDI",
+    "Dr. Deepak Sharma, Cameraman Grade-I, USMC"], officeBearers: [
+        {post: "Chair", name: "…", course: "…", year: "…"},
+            {post: "Vice-Chair", name: "…", course: "…", year: "…"},
+            {post: "Secretary", name: "…", course: "…", year: "…" },
+            {post: "Joint-Secretary", name: "…", course: "…", year: "…" },
+            {post: "Treasurer", name: "…", course: "…", year: "…" }
+    ] },
+      { code: "CSR",   name: "Corporate Social Responsibility Club", facultyEast: [      "Dr. Arti Singh, Assistant Professor, USAR",
+      "Dr. Ruchika Sehgal, Assistant Professor, USAR",
+      "Ms. Deekshalani Anand, Assistant Professor, USDI"], officeBearers: [
+        {post: "Chair", name: "…", course: "…", year: "…"},
+            {post: "Vice-Chair", name: "…", course: "…", year: "…"},
+            {post: "Secretary", name: "…", course: "…", year: "…" },
+            {post: "Joint-Secretary", name: "…", course: "…", year: "…" },
+            {post: "Treasurer", name: "…", course: "…", year: "…" }
+      ] },
+      { code: "EBSB",  name: "Ek Bharat Shreshtha Bharat – Viksit Bharat Club", facultyEast: [      "Dr. Sumit Chaudhary, Assistant Professor, USAR",
+      "Dr. Ritu Aggarwal, Assistant Professor, USAR",
+      "Dr. Jyoti Singh, Assistant Professor, USAP",
+      "Ms. Shubhangi Saxena, Assistant Professor, USDI"], officeBearers: [
+        {post: "Chair", name: "…", course: "…", year: "…"},
+            {post: "Vice-Chair", name: "…", course: "…", year: "…"},
+            {post: "Secretary", name: "…", course: "…", year: "…" },
+            {post: "Joint-Secretary", name: "…", course: "…", year: "…" },
+            {post: "Treasurer", name: "…", course: "…", year: "…" }
+      ] },
+      { code: "PUB",   name: "Publication Club", facultyEast: [     "Dr. Bipasha Kumar, Associate Professor, USAP",
+      "Dr. Bhanu Prakash Joshi, Assistant Professor, USAR",
+      "Dr. Subhashish Chowdhury, Assistant Professor, USAR",
+      "Dr. Subhash Nimampure, Assistant Professor, USAR",
+      "Ms. Komal Verma, Assistant Professor, USDI",
+      "Mr. Sarveshwaram Krishnam, Producer-Print, USMC"], officeBearers: [
+        {post: "Chair", name: "…", course: "…", year: "…"},
+            {post: "Vice-Chair", name: "…", course: "…", year: "…"},
+            {post: "Secretary", name: "…", course: "…", year: "…" },
+            {post: "Joint-Secretary", name: "…", course: "…", year: "…" },
+            {post: "Treasurer", name: "…", course: "…", year: "…" }
+      ] },
+      { code: "GC",    name: "Gender Champion Club", facultyEast: [ "Dr. Renu Dalal, Assistant Professor, USAR",
+      "Dr. Jyoti, Assistant Professor, USAR"], officeBearers: [
+        {post: "Chair", name: "…", course: "…", year: "…"},
+            {post: "Vice-Chair", name: "…", course: "…", year: "…"},
+            {post: "Secretary", name: "…", course: "…", year: "…" },
+            {post: "Joint-Secretary", name: "…", course: "…", year: "…" },
+            {post: "Treasurer", name: "…", course: "…", year: "…" }
+      ] },
+      { code: "ELCC",  name: "Electoral Literacy & Constitutional Club", facultyEast: [  "Dr. Anurag Giri, Assistant Professor, USAP",
+      "Dr. Aditi Kundu, Assistant Professor, USAP",
+      "Dr. Manoj Kumar, Assistant Professor, USAR"], officeBearers: [
+        {post: "Chair", name: "…", course: "…", year: "…"},
+            {post: "Vice-Chair", name: "…", course: "…", year: "…"},
+            {post: "Secretary", name: "…", course: "…", year: "…" },
+            {post: "Joint-Secretary", name: "…", course: "…", year: "…" },
+            {post: "Treasurer", name: "…", course: "…", year: "…" }
+      ] },
+      { code: "CSC",   name: "Cyber Security Club", facultyEast: ["Dr. Ashish Joshi, Assistant Professor, USAR", "Dr. Atul Tripathi, Assistant Professor, USAR"], officeBearers: [
+        {post: "Chair", name: "…", course: "…", year: "…"},
+            {post: "Vice-Chair", name: "…", course: "…", year: "…"},
+            {post: "Secretary", name: "…", course: "…", year: "…" },
+            {post: "Joint-Secretary", name: "…", course: "…", year: "…" },
+            {post: "Treasurer", name: "…", course: "…", year: "…" }
+      ] },
+      { code: "SANK",  name: "“SANKALP” – Club for Drug Abuse and Mental Wellbeing", facultyEast: [
+        "Dr. Sachin Bharti, Associate Professor, USMC",
+      "Dr. Charu Nangia, Associate Professor, USAR",
+      "Dr. Sumant Sharma, Assistant Professor, USAP",
+      "Dr. Jyoti Singh, Assistant Professor, USAP",
+      "Dr. Nikhilesh Sharma, Assistant Professor, USDI",
+      "Dr. Mahesh Chand, Assistant Professor, USAR"
+      ], officeBearers: [
+        {post: "Chair", name: "…", course: "…", year: "…"},
+            {post: "Vice-Chair", name: "…", course: "…", year: "…"},
+            {post: "Secretary", name: "…", course: "…", year: "…" },
+            {post: "Joint-Secretary", name: "…", course: "…", year: "…" },
+            {post: "Treasurer", name: "…", course: "…", year: "…" }
+      ] }
+    ];
+
+    // Example of how to fill data for ONE club (remove this comment when you paste real data):
+    /*
+    srijanClubs.find(c => c.code === "MUSIC").facultyEast = [
+      "Dr. Ashish Joshi, Assistant Professor, USAR",
+      "Dr. Anirban Dandapat, Assistant Professor, USAR"
+    ];
+    srijanClubs.find(c => c.code === "MUSIC").officeBearers = [
+      { post: "President", name: "Student Name 1", course: "AI & ML, USAR", year: "3rd Year" },
+      { post: "Vice President", name: "Student Name 2", course: "IIOT, USAR", year: "3rd Year" }
+      // ...continue as per Office Bearers PDF
+    ];
+    */
+
+    function renderSrijan() {
+      const grid = document.getElementById("srijanGrid");
+      grid.innerHTML = srijanClubs.map(club => {
+        const facultyList = (club.facultyEast && club.facultyEast.length)
+          ? `<ul class="list-disc list-inside text-xs text-gray-700 space-y-0.5">
+               ${club.facultyEast.map(f => `<li>${f}</li>`).join("")}
+             </ul>`
+          : `<p class="text-xs text-gray-500">Add East Campus Faculty Coordinators here from the DSW notice.</p>`;
+
+        const officeRows = (club.officeBearers && club.officeBearers.length)
+          ? club.officeBearers.map(ob => `
+              <tr class="border-t">
+                <td class="px-2 py-1">${ob.post}</td>
+                <td class="px-2 py-1 font-semibold text-gray-800">${ob.name}</td>
+                <td class="px-2 py-1">${ob.course || "-"}</td>
+                <td class="px-2 py-1">${ob.year || "-"}</td>
+              </tr>
+            `).join("")
+          : `<tr>
+               <td colspan="4" class="px-2 py-2 text-[11px] text-gray-500 text-center">
+                 Office bearers (President / Vice President / Secretary, etc.) to be filled as per the DSW “Office Bearers of Srijan Clubs” list.
+               </td>
+             </tr>`;
+
+        return `
+          <div class="border border-gray-100 rounded-xl shadow-sm p-4 flex flex-col h-full">
+            <h3 class="text-sm font-semibold text-blue-900 mb-1">${club.name}</h3>
+            <p class="text-[11px] text-gray-500 mb-2">
+              Srijan Club – East Delhi Campus
+            </p>
+            <div class="mb-3">
+              <p class="text-[11px] font-semibold text-gray-700 mb-1">Faculty Coordinators (East Campus)</p>
+              ${facultyList}
+            </div>
+            <div class="mt-auto">
+              <p class="text-[11px] font-semibold text-gray-700 mb-1">Student Office Bearers (2025–26)</p>
+              <div class="overflow-x-auto border border-gray-100 rounded-lg">
+                <table class="min-w-full text-[11px]">
+                  <thead class="bg-gray-50 text-left">
+                    <tr>
+                      <th class="px-2 py-1">Post</th>
+                      <th class="px-2 py-1">Name</th>
+                      <th class="px-2 py-1">Course / USS</th>
+                      <th class="px-2 py-1">Year</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    ${officeRows}
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        `;
+      }).join("");
+    }
+
+    renderSrijan();
+  </script>
+</body>
+</html>
