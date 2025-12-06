@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>GGSIPU – East Delhi Campus (EDC)</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- Fonts + Tailwind -->
+  <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin />
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;600;700&family=Poppins:wght@400;500;600;700&display=swap">
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <style>
+    body {
+      font-family: 'Public Sans', 'Poppins', sans-serif;
+      background: #f5f6fb;
+      color: #0f172a;
+    }
+    .scrolling-text {
+      display: inline-block;
+      white-space: nowrap;
+      animation: scroll-left 30s linear infinite;
+    }
+    .scrolling-text:hover { animation-play-state: paused; }
+    @keyframes scroll-left {
+      0% { transform: translateX(100%); }
+      100% { transform: translateX(-100%); }
+    }
+    .carousel-track {
+      transition: transform 0.7s ease-in-out;
+    }
+      .animate-ticker {
+    display: inline-block;
+    animation: ticker 25s linear infinite;
+  }
+  @keyframes ticker {
+    0%   { transform: translateX(0); }
+    100% { transform: translateX(-100%); }
+  }
+
+  /* pause on hover (optional) */
+  .bg-\[\#f5f9ff\]:hover .animate-ticker {
+    animation-play-state: paused;
+  }
+  </style>
+</head>
+<body class="min-h-screen">
+
+  <!-- HEADER (no navbar, just branding like your template) -->
+  <!-- ====== HEADER START ====== -->
+<!-- ====== NEW ELEGANT HEADER ====== -->
+<header class="bg-white shadow-sm border-b border-blue-100">
+  <div class="max-w-7xl mx-auto px-4 py-4 flex flex-col sm:flex-row items-center justify-between gap-4">
+
+    <!-- Left Logo -->
+    <img src="https://upload.wikimedia.org/wikipedia/en/thumb/b/b8/GGSIU_logo.svg/1200px-GGSIU_logo.svg.png"
+         alt="GGSIPU Logo"
+         class="h-14 w-auto">
+
+    <!-- Center Title Block -->
+    <div class="text-center leading-tight">
+      <h1 class="text-xl md:text-2xl font-extrabold text-blue-800 tracking-tight">
+        Guru Gobind Singh Indraprastha University
+      </h1>
+      <p class="text-[13px] md:text-sm text-slate-600">
+        East Delhi Campus – Surajmal Vihar, Delhi&nbsp;•&nbsp;110032
+      </p>
+      <div class="mt-1 flex justify-center">
+        <span class="px-3 py-0.5 text-[11px] uppercase tracking-wide bg-blue-50 border border-blue-200 text-blue-700 rounded-full">
+          Directorate of Students' Welfare • Student-Centric Campus
+        </span>
+      </div>
+    </div>
+
+    <!-- Right Logo -->
+    <img src="https://upload.wikimedia.org/wikipedia/commons/2/23/IPU_logo_red.png"
+         alt="IPU Logo"
+         class="h-14 w-auto">
+  </div>
+
+  <!-- Thin bottom accent bar -->
+  <div class="bg-blue-600 h-[3px] w-full"></div>
+
+  <!-- Optional quick link bar -->
+  <div class="bg-[#f5f9ff] border-t border-blue-100 overflow-hidden">
+  <div class="relative whitespace-nowrap">
+    <div class="animate-ticker inline-flex items-center gap-10 py-1.5 px-4 text-[13px] text-blue-900 font-medium">
+      <span class="flex items-center gap-1">
+        <span class="text-pink-500 text-sm"></span>
+        Welcome to Guru Gobind Singh Indraprastha University, East Delhi Campus
+      </span>
+      <span class="flex items-center gap-1">
+        <span class="text-pink-500 text-sm"></span>
+        गुरु गोबिंद सिंह इंद्रप्रस्थ विश्वविद्यालय, पूर्वी दिल्ली परिसर में आपका स्वागत है |
+      </span>
+    </div>
+    <!-- duplicate for seamless loop -->
+    
+  </div>
+</div>
+</header>
+<!-- ====== HEADER END ====== -->
+
+  <!-- HERO CAROUSEL (full width) -->
+  <section class="relative w-full h-[55vh] md:h-[65vh] bg-slate-200 overflow-hidden">
+    <div id="carouselTrack" class="flex w-full h-full carousel-track">
+      <!-- slide 1 -->
+      <div class="w-full h-full flex-shrink-0 relative">
+        <img src="https://images.pexels.com/photos/1181395/pexels-photo-1181395.jpeg" class="w-full h-full object-cover" alt="EDC Event 1">
+        <div class="absolute inset-0 bg-gradient-to-r from-slate-900/70 to-transparent"></div>
+        <div class="absolute top-1/2 -translate-y-1/2 left-6 md:left-14 max-w-xl text-white space-y-3">
+          <p class="text-xs md:text-sm uppercase tracking-wide text-blue-100">Student Activity & Welfare</p>
+          <h2 class="text-3xl md:text-5xl font-bold leading-tight">Events @ EDC</h2>
+          <p class="text-sm md:text-base text-slate-100">Elysian, Induction, Cultural & Technical Societies working together.</p>
+        </div>
+      </div>
+      <!-- slide 2 -->
+      <div class="w-full h-full flex-shrink-0 relative">
+        <img src="https://images.pexels.com/photos/1181343/pexels-photo-1181343.jpeg" class="w-full h-full object-cover" alt="EDC Event 2">
+        <div class="absolute inset-0 bg-gradient-to-r from-slate-900/70 to-transparent"></div>
+        <div class="absolute top-1/2 -translate-y-1/2 left-6 md:left-14 max-w-xl text-white space-y-3">
+          <p class="text-xs md:text-sm uppercase tracking-wide text-blue-100">Modern IPU Campus</p>
+          <h2 class="text-3xl md:text-5xl font-bold leading-tight">Academic Excellence</h2>
+          <p class="text-sm md:text-base text-slate-100">USAR, USCT, USDI, USAP & other schools operating from EDC.</p>
+        </div>
+      </div>
+      <!-- slide 3 -->
+      <div class="w-full h-full flex-shrink-0 relative">
+        <img src="https://images.pexels.com/photos/1181396/pexels-photo-1181396.jpeg" class="w-full h-full object-cover" alt="EDC Event 3">
+        <div class="absolute inset-0 bg-gradient-to-r from-slate-900/70 to-transparent"></div>
+        <div class="absolute top-1/2 -translate-y-1/2 left-6 md:left-14 max-w-xl text-white space-y-3">
+          <p class="text-xs md:text-sm uppercase tracking-wide text-blue-100">DSW – East Delhi Campus</p>
+          <h2 class="text-3xl md:text-5xl font-bold leading-tight">Student Centric Campus</h2>
+          <p class="text-sm md:text-base text-slate-100">Clubs, hours, certificates and reporting through single interface.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- controls -->
+    <button id="prevBtn"
+      class="absolute left-4 top-1/2 -translate-y-1/2 bg-white/70 hover:bg-white text-slate-800 w-10 h-10 rounded-full flex items-center justify-center shadow-md">
+      ‹
+    </button>
+    <button id="nextBtn"
+      class="absolute right-4 top-1/2 -translate-y-1/2 bg-white/70 hover:bg-white text-slate-800 w-10 h-10 rounded-full flex items-center justify-center shadow-md">
+      ›
+    </button>
+
+    <!-- dots -->
+    <div class="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-2">
+      <span data-slide="0" class="carousel-dot w-3 h-3 rounded-full bg-white/80 cursor-pointer"></span>
+      <span data-slide="1" class="carousel-dot w-3 h-3 rounded-full bg-white/30 cursor-pointer"></span>
+      <span data-slide="2" class="carousel-dot w-3 h-3 rounded-full bg-white/30 cursor-pointer"></span>
+    </div>
+  </section>
+
+  <main class="max-w-7xl mx-auto px-4 py-10 space-y-10">
+
+    <!-- ABOUT EDC -->
+    <section class="grid md:grid-cols-2 gap-8">
+      <div>
+        <h2 class="text-2xl md:text-3xl font-bold mb-3 text-slate-900">About GGSIPU – East Delhi Campus</h2>
+        <p class="text-slate-700 leading-relaxed mb-3">
+          The East Delhi Campus of Guru Gobind Singh Indraprastha University is a modern, multi-disciplinary campus focusing on
+          emerging technologies, design, professional education and student-driven activities. The campus works closely with the Directorate
+          of Students’ Welfare (DSW) to provide students with platforms for innovation, culture, technical societies and leadership.
+        </p>
+        <p class="text-slate-700 leading-relaxed mb-3">
+          EDC hosts flagship events like <strong>Elysian</strong>, <strong>Student Induction Programme (SIP)</strong>, inter-school competitions,
+          orientation programmes and outreach activities for the students of USAR, USCT, USDI, USAP and other constituent units.
+        </p>
+        <a href="https://sites.google.com/view/ggsipuedc" target="_blank"
+           class="inline-block mt-2 bg-slate-900 text-white px-5 py-2 rounded-md text-sm font-semibold hover:bg-slate-700">
+          Visit Official EDC Site
+        </a>
+      </div>
+      <div class="bg-white rounded-2xl shadow p-6">
+        <h3 class="text-lg font-semibold mb-3 text-slate-900">Campus Highlights</h3>
+        <ul class="space-y-2 text-sm text-slate-700">
+          <li>• Multiple University Schools operating from EDC</li>
+          <li>• Smart classrooms, seminar halls, activity zones</li>
+          <li>• Strong student council & club structure</li>
+          <li>• Located in a prime, well-connected East Delhi region</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- USS @ EDC -->
+    <section>
+      <h2 class="text-2xl md:text-3xl font-bold mb-4 text-slate-900">USS @ EDC</h2>
+      <p class="text-slate-600 mb-6 text-sm md:text-base">Schools presently operating or planned to operate from East Delhi Campus.</p>
+      <div class="grid gap-6 md:grid-cols-4">
+        <div class="bg-white border border-blue-50 rounded-xl shadow-sm p-5 hover:-translate-y-1 hover:shadow transition">
+          <h3 class="text-lg font-semibold text-slate-900 mb-1">USAR</h3>
+          <p class="text-sm text-slate-600">Automation & Robotics, AI-DS, AI-ML, IIoT.</p>
+        </div>
+        <div class="bg-white border border-blue-50 rounded-xl shadow-sm p-5 hover:-translate-y-1 hover:shadow transition">
+          <h3 class="text-lg font-semibold text-slate-900 mb-1">USCT</h3>
+          <p class="text-sm text-slate-600">Chemical Technology programmes.</p>
+        </div>
+        <div class="bg-white border border-blue-50 rounded-xl shadow-sm p-5 hover:-translate-y-1 hover:shadow transition">
+          <h3 class="text-lg font-semibold text-slate-900 mb-1">USDI / USAP</h3>
+          <p class="text-sm text-slate-600">Design / Architecture / Planning.</p>
+        </div>
+        <div class="bg-white border border-blue-50 rounded-xl shadow-sm p-5 hover:-translate-y-1 hover:shadow transition">
+          <h3 class="text-lg font-semibold text-slate-900 mb-1">Future Schools</h3>
+          <p class="text-sm text-slate-600">Interdisciplinary and professional programmes.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- INFRASTRUCTURE @ EDC -->
+    <section>
+      <h2 class="text-2xl md:text-3xl font-bold mb-4 text-slate-900">Infrastructure @ EDC</h2>
+      <div class="grid gap-5 md:grid-cols-4">
+        <div class="bg-white rounded-xl shadow-sm p-5 text-center">
+          <h4 class="font-semibold mb-1 text-slate-900">Smart Classrooms</h4>
+          <p class="text-xs text-slate-500">Audio-visual, ICT-enabled.</p>
+        </div>
+        <div class="bg-white rounded-xl shadow-sm p-5 text-center">
+          <h4 class="font-semibold mb-1 text-slate-900">Advanced Labs</h4>
+          <p class="text-xs text-slate-500">AI/ML, Robotics, Chemical labs.</p>
+        </div>
+        <div class="bg-white rounded-xl shadow-sm p-5 text-center">
+          <h4 class="font-semibold mb-1 text-slate-900">Seminar / Auditorium</h4>
+          <p class="text-xs text-slate-500">For SIP, orientations, expert talks.</p>
+        </div>
+        <div class="bg-white rounded-xl shadow-sm p-5 text-center">
+          <h4 class="font-semibold mb-1 text-slate-900">Student Activity Areas</h4>
+          <p class="text-xs text-slate-500">Clubs, practice, displays.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ALERTS / UPDATES -->
+    <section>
+      <div class="flex items-center justify-between gap-2 mb-3">
+        <h2 class="text-2xl font-bold text-slate-900">Alerts / Updates</h2>
+        <span class="text-xs text-slate-400">Last updated from DSW: 08 Nov 2025</span>
+      </div>
+      <div class="bg-amber-50 border-l-4 border-amber-400 rounded-md p-5 space-y-3">
+        <div>
+          <p class="text-sm font-semibold text-amber-900">• Submission of Student Activity Hours – 30 Nov 2025</p>
+          <p class="text-xs text-slate-600">All CRs to submit consolidated sheets to Student Cell.</p>
+        </div>
+        <div>
+          <p class="text-sm font-semibold text-amber-900">• Elysian 2025 Certificates</p>
+          <p class="text-xs text-slate-600">Organizers & volunteers to collect stamped certificates from USAR office.</p>
+        </div>
+        <div>
+          <p class="text-sm font-semibold text-amber-900">• SIP 2025 Tentative Schedule</p>
+          <p class="text-xs text-slate-600">Schedule will be shared on this portal and Google Sites.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- PORTALS -->
+    <section>
+      <h2 class="text-2xl md:text-3xl font-bold mb-4 text-slate-900">Online Services & Portals</h2>
+      <div class="grid md:grid-cols-2 gap-6">
+        <!-- fee portal -->
+        <div class="bg-white rounded-2xl shadow p-6 flex gap-4 items-start">
+          <div class="flex-shrink-0 w-10 h-10 rounded-full bg-blue-100 text-blue-700 flex items-center justify-center font-bold text-lg">₹</div>
+          <div>
+            <h3 class="text-lg font-semibold mb-1 text-slate-900">Online Fee Services Portal</h3>
+            <p class="text-sm text-slate-600 mb-3">Pay academic / exam / other fees through the university’s online fee collection system.</p>
+            <a href="#" class="inline-block px-4 py-1.5 bg-blue-700 text-white rounded-md text-sm font-semibold hover:bg-blue-800">Go to Fee Portal</a>
+          </div>
+        </div>
+        <!-- student portal -->
+        <div class="bg-white rounded-2xl shadow p-6 flex gap-4 items-start">
+          <div class="flex-shrink-0 w-10 h-10 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center font-bold text-lg">S</div>
+          <div>
+            <h3 class="text-lg font-semibold mb-1 text-slate-900">Student Activity / Hours Portal</h3>
+            <p class="text-sm text-slate-600 mb-3">Check event hours, download certificates, view DSW notices and club participation.</p>
+            <a href="#" class="inline-block px-4 py-1.5 bg-emerald-600 text-white rounded-md text-sm font-semibold hover:bg-emerald-700">Open Student Portal</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- RECENT EVENTS -->
+    <section>
+      <div class="flex items-center justify-between mb-4">
+        <h2 class="text-2xl font-bold text-slate-900">Recent Events @ EDC</h2>
+        <a href="#" class="text-sm text-blue-700 hover:underline">View all</a>
+      </div>
+      <div class="grid md:grid-cols-3 gap-6">
+        <div class="bg-white rounded-xl shadow overflow-hidden">
+          <img src="https://images.pexels.com/photos/1170412/pexels-photo-1170412.jpeg" class="w-full h-40 object-cover" alt="Event 1">
+          <div class="p-4">
+            <p class="text-xs text-slate-400 mb-1">17 Oct 2025</p>
+            <h3 class="text-sm font-semibold text-slate-900 mb-1">Elysian 3.0 – Annual Tech & Cultural Fest</h3>
+            <p class="text-xs text-slate-600">Organized by USAR with support from DSW (EDC).</p>
+          </div>
+        </div>
+        <div class="bg-white rounded-xl shadow overflow-hidden">
+          <img src="https://images.pexels.com/photos/3182812/pexels-photo-3182812.jpeg" class="w-full h-40 object-cover" alt="Event 2">
+          <div class="p-4">
+            <p class="text-xs text-slate-400 mb-1">05 Oct 2025</p>
+            <h3 class="text-sm font-semibold text-slate-900 mb-1">Student Induction Programme (SIP)</h3>
+            <p class="text-xs text-slate-600">Welcome address, faculty interaction, campus tour.</p>
+          </div>
+        </div>
+        <div class="bg-white rounded-xl shadow overflow-hidden">
+          <img src="https://images.pexels.com/photos/1181391/pexels-photo-1181391.jpeg" class="w-full h-40 object-cover" alt="Event 3">
+          <div class="p-4">
+            <p class="text-xs text-slate-400 mb-1">28 Sept 2025</p>
+            <h3 class="text-sm font-semibold text-slate-900 mb-1">Clubs & Societies Orientation</h3>
+            <p class="text-xs text-slate-600">All technical / non-tech clubs presented activity plan.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="bg-slate-900 text-white mt-10">
+    <div class="max-w-7xl mx-auto px-4 py-8 grid md:grid-cols-3 gap-6">
+      <div>
+        <h3 class="text-sm font-semibold mb-2">GGSIPU – East Delhi Campus</h3>
+        <p class="text-xs text-slate-200">Surajmal Vihar, Delhi – 110032</p>
+      </div>
+      <div>
+        <h3 class="text-sm font-semibold mb-2">Useful</h3>
+        <ul class="text-xs space-y-1 text-slate-200">
+          <li><a href="https://sites.google.com/view/ggsipuedc" class="hover:underline" target="_blank">Official EDC Site</a></li>
+          <li><a href="#" class="hover:underline">DSW Notices</a></li>
+          <li><a href="#" class="hover:underline">Student Hours Portal</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3 class="text-sm font-semibold mb-2">Contact</h3>
+        <p class="text-xs text-slate-200">Mail: rahul@ipu.ac.in</p>
+      </div>
+    </div>
+    <div class="text-center text-xs text-slate-400 py-3 border-t border-slate-800">
+      © 2025 Guru Gobind Singh Indraprastha University – East Delhi Campus
+    </div>
+  </footer>
+
+  <!-- CAROUSEL SCRIPT -->
+  <script>
+    const track = document.getElementById('carouselTrack');
+    const dots = document.querySelectorAll('.carousel-dot');
+    const total = 3;
+    let current = 0;
+
+    function goToSlide(n) {
+      current = (n + total) % total;
+      track.style.transform = `translateX(-${current * 100}%)`;
+      dots.forEach((d, i) => {
+        d.classList.toggle('bg-white/80', i === current);
+        d.classList.toggle('bg-white/30', i !== current);
+      });
+    }
+
+    document.getElementById('prevBtn').addEventListener('click', () => goToSlide(current - 1));
+    document.getElementById('nextBtn').addEventListener('click', () => goToSlide(current + 1));
+    dots.forEach(dot => {
+      dot.addEventListener('click', () => goToSlide(parseInt(dot.dataset.slide)));
+    });
+
+    setInterval(() => {
+      goToSlide(current + 1);
+    }, 6500);
+
+    goToSlide(0);
+  </script>
+</body>
+</html>

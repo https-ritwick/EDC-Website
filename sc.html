@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Student Council, East Campus – Academic Session 2025-26</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+  <style>
+    body { font-family: 'Public Sans', sans-serif; }
+    .scrolling-text {
+      display: inline-block;
+      animation: scroll-left 40s linear infinite;
+      white-space: nowrap;
+    }
+    @keyframes scroll-left {
+      0% { transform: translateX(100%); }
+      100% { transform: translateX(-100%); }
+    }
+    .scrolling-text:hover { animation-play-state: paused; }
+  </style>
+</head>
+<body class="bg-gray-50 text-gray-900">
+
+  <!-- HEADER with 2 logos -->
+  <header class="bg-white shadow-md border-b border-blue-100 sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto px-4 py-3 flex justify-between items-center">
+      <!-- left logo -->
+      <div class="flex items-center gap-3">
+        <img src="https://upload.wikimedia.org/wikipedia/en/thumb/b/b8/GGSIU_logo.svg/1200px-GGSIU_logo.svg.png" class="h-12 md:h-14" alt="Guru Gobind Singh Indraprastha University Logo">
+        <div>
+          <p class="text-xs tracking-wide text-gray-500 uppercase">Directorate of Students’ Welfare</p>
+          <h1 class="text-lg md:text-xl font-bold text-blue-900 leading-tight">Guru Gobind Singh Indraprastha University</h1>
+          <p class="text-xs text-gray-500">East Delhi Campus</p>
+        </div>
+      </div>
+      <!-- right logo -->
+      <div class="hidden md:block">
+        <img src="https://github.com/https-ritwick/Reporting-Management-System/blob/main/static/img/Logo/new_logo_withoutbg.png?raw=true" class="h-12 md:h-14" alt="IPU Logo Right">
+      </div>
+    </div>
+  </header>
+
+  <!-- HERO + ANNOUNCE -->
+  <section class="bg-gradient-to-r from-blue-50 via-white to-blue-50">
+    <div class="max-w-7xl mx-auto px-4 py-8 md:py-10 flex flex-col md:flex-row gap-8 items-start md:items-center">
+      <div class="md:w-2/3">
+        <p class="inline-block bg-blue-100 text-blue-900 px-3 py-1 rounded-full text-xs font-semibold mb-4">Student Council, East Campus – Academic Session: 2025-26</p>
+        <h2 class="text-3xl md:text-4xl font-bold text-blue-900 mb-3">Student Council - East Delhi Campus</h2>
+        <p class="text-gray-700 mb-4">School Representatives (SR) and Class Representatives (CR) of all University Schools of East Delhi Campus: <strong>USAR, USDI, USAP and USMC</strong> as shared with DSW.</p>
+      </div>
+      <!-- previous council links -->
+      <div class="md:w-1/3 w-full bg-white rounded-xl shadow-md p-4">
+        <h3 class="text-sm font-semibold text-blue-900 mb-2">Previous Student Council (Archives)</h3>
+        <ul class="text-sm space-y-1">
+          <li><a href="https://sites.google.com/view/ggsipuedc/students/student-council/student-council-2023-24?authuser=0" class="text-blue-700 hover:underline">Student Council 2023-24</a></li>
+          <li><a href="https://sites.google.com/view/ggsipuedc/students/student-council/student-council-2022-23?authuser=0" class="text-blue-700 hover:underline">Student Council 2022-23</a></li>
+        </ul>
+      </div>
+    </div>
+    <!-- scrolling -->
+    <div class="w-full bg-blue-100 overflow-hidden py-2 border-y border-blue-200">
+      <div class="scrolling-text text-blue-800 text-sm font-semibold px-4">
+        Welcome to Directorate of Students’ Welfare, East Delhi Campus !
+      </div>
+    </div>
+  </section>
+
+  <main id="council" class="max-w-7xl mx-auto px-4 py-10">
+    <!-- FILTER BAR -->
+    <div class="bg-white rounded-lg shadow p-4 md:p-6 mb-8">
+      <div class="flex flex-col md:flex-row gap-4 md:items-center justify-between">
+        <!-- school buttons -->
+        <div class="flex flex-wrap gap-2">
+          <button data-school="USAR" class="school-btn px-4 py-2 rounded-full bg-blue-800 text-white text-sm font-semibold shadow-sm">USAR</button>
+          <button data-school="USDI" class="school-btn px-4 py-2 rounded-full bg-gray-100 text-gray-800 text-sm font-semibold">USDI</button>
+          <button data-school="USAP" class="school-btn px-4 py-2 rounded-full bg-gray-100 text-gray-800 text-sm font-semibold">USAP</button>
+          <button data-school="USMC" class="school-btn px-4 py-2 rounded-full bg-gray-100 text-gray-800 text-sm font-semibold">USMC</button>
+        </div>
+        <!-- search -->
+        <div class="flex gap-2 items-center w-full md:w-auto">
+          <input id="searchInput" type="text" placeholder="Search name / enrollment / branch..." class="border border-gray-200 rounded px-3 py-2 w-full md:w-72 text-sm focus:outline-none focus:ring-2 focus:ring-blue-200">
+          <button id="clearSearch" class="text-xs text-gray-500 hover:text-gray-700">Clear</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- DYNAMIC CONTENT -->
+    <section id="schoolContent" class="space-y-6">
+      <!-- JS will inject SR + tables + photo for USAR -->
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer id="contact" class="bg-gray-900 text-white mt-16">
+    <div class="max-w-7xl mx-auto px-4 py-10 grid grid-cols-1 md:grid-cols-3 gap-6">
+      <div>
+        <h3 class="text-lg font-bold mb-2">Directorate of Students’ Welfare</h3>
+        <p class="text-sm text-gray-200">The Directorate of Students Welfare was established to provide opportunities and adequate amenities for all round development of personality and leadership qualities among students.</p>
+      </div>
+      <div>
+        <h3 class="text-lg font-bold mb-2">Quick Links</h3>
+        <ul class="space-y-1 text-sm">
+          <li><a href="https://sites.google.com/view/ggsipuedc" target="_blank" class="hover:underline">EDC Official Website</a></li>
+          <li><a href="#council" class="hover:underline">Student Council – 2025-26</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3 class="text-lg font-bold mb-2">Contact</h3>
+        <p class="text-sm">DSW (EDC) Office, A-214, A-Block, East Delhi Campus, Surajmal Vihar, Delhi-110032</p>
+        <p class="text-sm mt-2">Mail: <span class="underline">rahul@ipu.ac.in</span></p>
+      </div>
+    </div>
+    <div class="bg-gray-800 text-center text-sm py-3">
+      ©Directorate of Students’ Welfare, East Delhi Campus
+    </div>
+  </footer>
+
+  <script type="text/javascript">
+    const councilData = [
+      {
+        school: "USAR",
+        elected_sr: [
+          {
+            branch: "Artificial Intelligence-Data Science (AI-DS)",
+            batch: "B1",
+            enroll: "02619051922",
+            name: "Ritwick Johari"
+          },
+          {
+            branch: "Industrial Internet of Things (IIOT)",
+            batch: "B2",
+            enroll: "08119051723",
+            name: "Tanya Gupta"
+          }
+        ],
+        nominated_sr: [
+          {
+            branch: "Automation & Robotics",
+            batch: "B1",
+            enroll: "519072023",
+            name: "Ravi Ranjan Bhardwaj"
+          },
+          {
+            branch: "Artificial Intelligence-Data Science (AI-DS)",
+            batch: "B1",
+            enroll: "4619051923",
+            name: "Amisha Rawat"
+          }
+        ],
+        batches: [
+          {
+            title: "Batch 2022-2026 (4th year)",
+            students: [
+              { branch: "Artificial Intelligence-Data Science (AI-DS)", batch: "B1", enroll: "02619051922", name: "Ritwick Johari" },
+              { branch: "Artificial Intelligence-Data Science (AI-DS)", batch: "B1", enroll: "05619051922", name: "Kavleen Kaur" },
+              { branch: "Industrial Internet of Things (IIOT)", batch: "B1", enroll: "04519051722", name: "Sumit Kumar" },
+              { branch: "Industrial Internet of Things (IIOT)", batch: "B2", enroll: "08519051722", name: "Doli Singh" },
+              { branch: "Industrial Internet of Things (IIOT)", batch: "B2", enroll: "13219051722", name: "Ansh Singh" },
+              { branch: "Automation & Robotics (A&R)", batch: "B1", enroll: "06119052022", name: "Shreyash Mishra" },
+              { branch: "Automation & Robotics (A&R)", batch: "B2", enroll: "10019052022", name: "Gurpreet Singh Satha" },
+              { branch: "Automation & Robotics (A&R)", batch: "B2", enroll: "10219052022", name: "Alorika Jain" }
+            ]
+          },
+          {
+            title: "Batch 2023-2027 (3rd year)",
+            students: [
+              { branch: "Artificial Intelligence-Data Science (AI-DS)", batch: "B1", enroll: "01219051923", name: "Yashwardhan Singh" },
+              { branch: "Artificial Intelligence-Data Science (AI-DS)", batch: "B1", enroll: "04619051923", name: "Amisha Rawat" },
+              { branch: "Artificial Intelligence-Data Science (AI-DS)", batch: "B2", enroll: "10719051923", name: "Sparsh Gupta" },
+              { branch: "Artificial Intelligence-Machine Learning (AI-ML)", batch: "B2", enroll: "11819051623", name: "Nikhil Yadav" },
+              { branch: "Industrial Internet of Things (IIOT)", batch: "B1", enroll: "01519051723", name: "Aman Kumar" },
+              { branch: "Industrial Internet of Things (IIOT)", batch: "B2", enroll: "00819051723", name: "Asmita Khandelwal" },
+              { branch: "Industrial Internet of Things (IIOT)", batch: "B2", enroll: "07519051723", name: "Gaurav Kumar Gupta" },
+              { branch: "Industrial Internet of Things (IIOT)", batch: "B2", enroll: "08119051723", name: "Tanya Gupta" },
+              { branch: "Automation & Robotics (A&R)", batch: "B1", enroll: "04919052023", name: "Ravi Jain" },
+              { branch: "Automation & Robotics (A&R)", batch: "B1", enroll: "03219052023", name: "Harshita Singh" }
+            ]
+          },
+          {
+            title: "Batch 2024-2028 (2nd year)",
+            students: [
+              { branch: "Artificial Intelligence-Data Science (AI-DS)", batch: "B1", enroll: "04719051924", name: "Tarini Agarwal" },
+              { branch: "Artificial Intelligence-Data Science (AI-DS)", batch: "B1", enroll: "06519051924", name: "Yash Shahi" },
+              { branch: "Artificial Intelligence-Data Science (AI-DS)", batch: "B2", enroll: "10819051924", name: "Priyansh" },
+              { branch: "Artificial Intelligence-Data Science (AI-DS)", batch: "B2", enroll: "10219051924", name: "Khushi Singh" },
+              { branch: "Artificial Intelligence-Machine Learning (AI-ML)", batch: "B1", enroll: "02019051624", name: "Arjun Kaushik" },
+              { branch: "Artificial Intelligence-Machine Learning (AI-ML)", batch: "B1", enroll: "05419051624", name: "Prisha Saharan" },
+              { branch: "Artificial Intelligence-Machine Learning (AI-ML)", batch: "B2", enroll: "51319051624", name: "Yash Rathee" },
+              { branch: "Artificial Intelligence-Machine Learning (AI-ML)", batch: "B2", enroll: "51119051624", name: "Nandini Bhatt" },
+              { branch: "Industrial Internet of Things (IIOT)", batch: "B1", enroll: "05919051724", name: "Samridh Kandwal" },
+              { branch: "Industrial Internet of Things (IIOT)", batch: "B1", enroll: "04519051724", name: "Ritu Sikarwar" },
+              { branch: "Industrial Internet of Things (IIOT)", batch: "B2", enroll: "06719051724", name: "Aayan Khan" },
+              { branch: "Industrial Internet of Things (IIOT)", batch: "B2", enroll: "08019051724", name: "Aashna Anand" },
+              { branch: "Automation & Robotics (A&R)", batch: "B1", enroll: "04619052024", name: "Manan Arora" },
+              { branch: "Automation & Robotics (A&R)", batch: "B1", enroll: "03719052024", name: "Muskan" },
+              { branch: "Automation & Robotics (A&R)", batch: "B2", enroll: "07519052024", name: "Arunima Jain" },
+              { branch: "Automation & Robotics (A&R)", batch: "B1", enroll: "11919052024", name: "Prarthna" }
+            ]
+          },
+          {
+            title: "Batch 2025-2029 (1st year)",
+            students: [
+              { branch: "Artificial Intelligence-Data Science (AI-DS)", batch: "B1", enroll: "00519051925", name: "Areeb Arshad" },
+              { branch: "Artificial Intelligence-Data Science (AI-DS)", batch: "B1", enroll: "00819051925", name: "Sejal Pal" },
+              { branch: "Artificial Intelligence-Data Science (AI-DS)", batch: "B2", enroll: "11319051925", name: "Iesh Dwivedi" },
+              { branch: "Artificial Intelligence-Data Science (AI-DS)", batch: "B2", enroll: "12519051925", name: "Bhumika" },
+              { branch: "Artificial Intelligence-Machine Learning (AI-ML)", batch: "B1", enroll: "04119051625", name: "Moksh Gola" },
+              { branch: "Artificial Intelligence-Machine Learning (AI-ML)", batch: "B1", enroll: "01219051625", name: "Meghna Thakran" },
+              { branch: "Artificial Intelligence-Machine Learning (AI-ML)", batch: "B2", enroll: "08919051625", name: "Raunak Jha" },
+              { branch: "Artificial Intelligence-Machine Learning (AI-ML)", batch: "B2", enroll: "14919051625", name: "Gneev Kaur" },
+              { branch: "Industrial Internet of Things (IIOT)", batch: "B1", enroll: "02519051725", name: "Kushagr Dureja" },
+              { branch: "Industrial Internet of Things (IIOT)", batch: "B1", enroll: "00619051725", name: "Kripa Grover" },
+              { branch: "Industrial Internet of Things (IIOT)", batch: "B2", enroll: "08519051725", name: "Anvesha Singh" },
+              { branch: "Industrial Internet of Things (IIOT)", batch: "B2", enroll: "14019051725", name: "Sahil" },
+              { branch: "Automation & Robotics (A&R)", batch: "B1", enroll: "03719052025", name: "Krish" },
+              { branch: "Automation & Robotics (A&R)", batch: "B1", enroll: "00919052025", name: "Ashi Gupta" },
+              { branch: "Automation & Robotics (A&R)", batch: "B2", enroll: "06519052025", name: "Kalash Jha" },
+              { branch: "Automation & Robotics (A&R)", batch: "B2", enroll: "11519052025", name: "Yashita Sharma" }
+            ]
+          }
+        ],
+        photo: {
+          url: "https://github.com/https-ritwick/EDC-Website/blob/main/IMG-20251108-WA0017.jpg?raw=true",
+          caption: "USAR Student Council – Academic Session 2025-26"
+        }
+      },
+      {
+        school: "USDI",
+        elected_sr: [
+          {
+            branch: "B.Des 2023 – ID",
+            batch: "2023",
+            enroll: "02818241824",
+            name: "Smayra Dhiman"
+          },
+          {
+            branch: "B.Des 2023 – ID",
+            batch: "2023",
+            enroll: "02918241824",
+            name: "Devansh Jain"
+          },
+          {
+            branch: "B.Des 2022 – ID",
+            batch: "2022",
+            enroll: "06618241622",
+            name: "Dev Grover"
+          }
+        ],
+        nominated_sr: [
+          {
+            branch: "B.Des 2022 – IX",
+            batch: "2022",
+            enroll: "01018241622",
+            name: "Arpita"
+          }
+        ],
+        batches: [
+          {
+            title: "B.Des Foundation 2025",
+            students: [
+              { branch: "B.Des Foundation 2025", batch: "Section A", enroll: "01318241825", name: "Siya Rai" },
+              { branch: "B.Des Foundation 2025", batch: "Section A", enroll: "00718241925", name: "Prateek" },
+              { branch: "B.Des Foundation 2025", batch: "Section B", enroll: "01818241825", name: "Jitisha Agarwal" },
+              { branch: "B.Des Foundation 2025", batch: "Section B", enroll: "01318241925", name: "Utsav Singh" }
+            ]
+          },
+          {
+            title: "B.Des IX",
+            students: [
+              { branch: "B.Des IX", batch: "Batch 2022", enroll: "04618241622", name: "Nidhi Khanna" },
+              { branch: "B.Des IX", batch: "Batch 2022", enroll: "06118241622", name: "Pratham Mehra" },
+              { branch: "B.Des IX", batch: "Batch 2023", enroll: "06218241923", name: "Thokchom Angelina" },
+              { branch: "B.Des IX", batch: "Batch 2023", enroll: "05618241923", name: "Keshav" },
+              { branch: "B.Des IX", batch: "Batch 2024", enroll: "04318241924", name: "Amber Mirza" },
+              { branch: "B.Des IX", batch: "Batch 2024", enroll: "02218241924", name: "Vansh Saha" }
+            ]
+          },
+          {
+            title: "B.Des ID",
+            students: [
+              { branch: "B.Des ID", batch: "Batch 2022", enroll: "03218241622", name: "Devanshi Bhardwaj" },
+              { branch: "B.Des ID", batch: "Batch 2023", enroll: "10518241823", name: "Rahul Dev" },
+              { branch: "B.Des ID", batch: "Batch 2023", enroll: "20418241823", name: "Ishita Bhatt" },
+              { branch: "B.Des ID", batch: "Batch 2024", enroll: "02918241824", name: "Devansh Jain" },
+              { branch: "B.Des ID", batch: "Batch 2024", enroll: "02818241824", name: "Smayra" }
+            ]
+          },
+          {
+            title: "B.Des IN",
+            students: [
+              { branch: "B.Des IN", batch: "Batch 2022", enroll: "06218241622", name: "Khushi Khandelwal" },
+              { branch: "B.Des IN", batch: "Batch 2023", enroll: "00518241723", name: "Mansi Yadav" },
+              { branch: "B.Des IN", batch: "Batch 2024", enroll: "00118241724", name: "Jiya Mahajan" },
+              { branch: "B.Des IN", batch: "Batch 2024", enroll: "02218241724", name: "Dhruv Rajput" }
+            ]
+          },
+          {
+            title: "M.Des",
+            students: [
+              { branch: "M.Des", batch: "Batch 2024", enroll: "20218245124", name: "Vasundhra" },
+              { branch: "M.Des", batch: "Batch 2025", enroll: "00118245125", name: "Muskan Singhal" }
+            ]
+          }
+        ],
+        photo: null
+      },
+      {
+        school: "USAP",
+        elected_sr: [
+          {
+            branch: "B.Arch",
+            batch: "5th – A",
+            enroll: "04217301621",
+            name: "Ishika Singh"
+          },
+          {
+            branch: "B.Arch",
+            batch: "3rd – A",
+            enroll: "00117301623",
+            name: "Prabsheen Kaur Sethi"
+          },
+          {
+            branch: "B.Arch",
+            batch: "3rd – A",
+            enroll: "00317301623",
+            name: "Vaibhav Kumar Jangra"
+          }
+        ],
+        nominated_sr: [
+          {
+            branch: "B.Arch",
+            batch: "5th – A",
+            enroll: "01717301621",
+            name: "Yash Mathur"
+          }
+        ],
+        batches: [],
+        photo: null
+      },
+      {
+        school: "USMC",
+        elected_sr: [
+          {
+            branch: "MA (MC)",
+            batch: "3rd Semester",
+            enroll: "00820314024",
+            name: "Anshula Mukherjee"
+          },
+          {
+            branch: "BA (JMC)",
+            batch: "3rd Semester",
+            enroll: "01720602424",
+            name: "Ujjwal Kumar"
+          },
+          {
+            branch: "MA (MC)",
+            batch: "3rd Semester",
+            enroll: "01820314024",
+            name: "Bhavya Trivedi"
+          }
+        ],
+        nominated_sr: [],
+        batches: [],
+        photo: null
+      }
+    ];
+
+    const schoolButtons = document.querySelectorAll(".school-btn");
+    const schoolContent = document.getElementById("schoolContent");
+    const searchInput = document.getElementById("searchInput");
+    const clearSearch = document.getElementById("clearSearch");
+
+    let activeSchool = "USAR";
+    let searchQuery = "";
+
+    function renderSchool() {
+      const data = councilData.find(d => d.school === activeSchool);
+      schoolContent.innerHTML = "";
+
+      if (!data) {
+        schoolContent.innerHTML = `<p class="text-sm text-gray-500">No data found for this school.</p>`;
+        return;
+      }
+
+      // photo block
+      if (data.photo && data.photo.url) {
+        const photoBlock = document.createElement("div");
+        photoBlock.className = "bg-white rounded-lg shadow overflow-hidden";
+        photoBlock.innerHTML = `
+          <img src="${data.photo.url}" alt="${data.photo.caption}" class="w-full md:w-auto max-h-[300px] object-cover">
+          <div class="px-4 py-2">
+            <p class="text-sm text-gray-700">${data.photo.caption}</p>
+          </div>
+        `;
+        schoolContent.appendChild(photoBlock);
+      }
+
+      // SR SECTION
+      const srSection = document.createElement("div");
+      srSection.className = "bg-white rounded-lg shadow p-4 md:p-6";
+      let srHTML = `<h2 class="text-lg font-bold text-blue-900 mb-4">Elected School Representative (SR) – ${activeSchool}</h2>`;
+
+      if (data.elected_sr && data.elected_sr.length > 0) {
+        srHTML += `
+          <div class="overflow-x-auto rounded border border-gray-100 mb-6">
+            <table class="min-w-full text-sm">
+              <thead class="bg-blue-50 text-left">
+                <tr>
+                  <th class="px-3 py-2">S.No</th>
+                  <th class="px-3 py-2">Branch</th>
+                  <th class="px-3 py-2">Batch</th>
+                  <th class="px-3 py-2">Enrollment No.</th>
+                  <th class="px-3 py-2">Student Name</th>
+                </tr>
+              </thead>
+              <tbody>
+                ${data.elected_sr.map((item, idx) => `
+                  <tr class="border-t">
+                    <td class="px-3 py-2">${idx + 1}</td>
+                    <td class="px-3 py-2">${item.branch || "-"}</td>
+                    <td class="px-3 py-2">${item.batch || "-"}</td>
+                    <td class="px-3 py-2">${item.enroll || "-"}</td>
+                    <td class="px-3 py-2 font-semibold text-gray-800">${item.name}</td>
+                  </tr>
+                `).join("")}
+              </tbody>
+            </table>
+          </div>
+        `;
+      } else {
+        srHTML += `<p class="text-sm text-gray-500 mb-6">No elected SR found.</p>`;
+      }
+
+      // nominated SR
+      srHTML += `<h2 class="text-lg font-bold text-blue-900 mb-4">Nominated School Representative (SR)</h2>`;
+      if (data.nominated_sr && data.nominated_sr.length > 0) {
+        srHTML += `
+          <div class="overflow-x-auto rounded border border-gray-100 mb-6">
+            <table class="min-w-full text-sm">
+              <thead class="bg-blue-50 text-left">
+                <tr>
+                  <th class="px-3 py-2">S.No</th>
+                  <th class="px-3 py-2">Branch</th>
+                  <th class="px-3 py-2">Batch</th>
+                  <th class="px-3 py-2">Enrollment No.</th>
+                  <th class="px-3 py-2">Student Name</th>
+                </tr>
+              </thead>
+              <tbody>
+                ${data.nominated_sr.map((item, idx) => `
+                  <tr class="border-t">
+                    <td class="px-3 py-2">${idx + 1}</td>
+                    <td class="px-3 py-2">${item.branch || "-"}</td>
+                    <td class="px-3 py-2">${item.batch || "-"}</td>
+                    <td class="px-3 py-2">${item.enroll || "-"}</td>
+                    <td class="px-3 py-2 font-semibold text-gray-800">${item.name}</td>
+                  </tr>
+                `).join("")}
+              </tbody>
+            </table>
+          </div>
+        `;
+      } else {
+        srHTML += `<p class="text-sm text-gray-500 mb-6">No nominated SR found.</p>`;
+      }
+
+      srSection.innerHTML = srHTML;
+      schoolContent.appendChild(srSection);
+
+      // BATCH SECTION
+      const batchWrapper = document.createElement("div");
+      batchWrapper.className = "bg-white rounded-lg shadow p-4 md:p-6";
+
+      const batchTabs = document.createElement("div");
+      batchTabs.className = "flex flex-wrap gap-2 mb-4";
+      let activeBatchIndex = 0;
+
+      const batchContent = document.createElement("div");
+      batchContent.id = "batchContent";
+
+      function renderBatch(index) {
+        const batch = data.batches[index];
+        if (!batch) {
+          batchContent.innerHTML = `<p class="text-sm text-gray-500">No batch data.</p>`;
+          return;
+        }
+
+        const filteredStudents = batch.students.filter(stu => {
+          const str = (stu.branch + " " + stu.name + " " + stu.enroll).toLowerCase();
+          return str.includes(searchQuery.toLowerCase());
+        });
+
+        batchContent.innerHTML = `
+          <h3 class="text-md font-bold text-blue-900 mb-3">${batch.title}</h3>
+          <div class="overflow-x-auto rounded border border-gray-100">
+            <table class="min-w-full text-sm">
+              <thead class="bg-blue-50 text-left">
+                <tr>
+                  <th class="px-3 py-2">S.No</th>
+                  <th class="px-3 py-2">Branch</th>
+                  <th class="px-3 py-2">Batch</th>
+                  <th class="px-3 py-2">Enrollment No.</th>
+                  <th class="px-3 py-2">Student Name</th>
+                </tr>
+              </thead>
+              <tbody>
+                ${filteredStudents.length > 0 ? filteredStudents.map((stu, idx) => `
+                  <tr class="border-t">
+                    <td class="px-3 py-2">${idx + 1}</td>
+                    <td class="px-3 py-2">${stu.branch || "-"}</td>
+                    <td class="px-3 py-2">${stu.batch || "-"}</td>
+                    <td class="px-3 py-2">${stu.enroll || "-"}</td>
+                    <td class="px-3 py-2 font-semibold text-gray-800">${stu.name || "-"}</td>
+                  </tr>
+                `).join("") : `<tr><td colspan="5" class="px-3 py-3 text-center text-gray-400 text-sm">No records match the search.</td></tr>`}
+              </tbody>
+            </table>
+          </div>
+        `;
+      }
+
+      data.batches.forEach((b, idx) => {
+        const btn = document.createElement("button");
+        btn.textContent = b.title;
+        btn.className = "batch-tab px-3 py-1 rounded-full text-xs md:text-sm " + (idx === 0 ? "bg-blue-800 text-white" : "bg-gray-100 text-gray-700");
+        btn.addEventListener("click", () => {
+          batchWrapper.querySelectorAll(".batch-tab").forEach(t => {
+            t.classList.remove("bg-blue-800", "text-white");
+            t.classList.add("bg-gray-100", "text-gray-700");
+          });
+          btn.classList.add("bg-blue-800", "text-white");
+          btn.classList.remove("bg-gray-100", "text-gray-700");
+          activeBatchIndex = idx;
+          renderBatch(activeBatchIndex);
+        });
+        batchTabs.appendChild(btn);
+      });
+
+      batchWrapper.appendChild(batchTabs);
+      batchWrapper.appendChild(batchContent);
+      schoolContent.appendChild(batchWrapper);
+
+      renderBatch(activeBatchIndex);
+      schoolContent.dataset.activeBatch = activeBatchIndex;
+    }
+
+    // school button events
+    schoolButtons.forEach(btn => {
+      btn.addEventListener("click", () => {
+        schoolButtons.forEach(b => b.classList.remove("bg-blue-800", "text-white"));
+        schoolButtons.forEach(b => b.classList.add("bg-gray-100", "text-gray-800"));
+        btn.classList.remove("bg-gray-100", "text-gray-800");
+        btn.classList.add("bg-blue-800", "text-white");
+        activeSchool = btn.dataset.school;
+        searchQuery = "";
+        searchInput.value = "";
+        renderSchool();
+      });
+    });
+
+    // search
+    searchInput.addEventListener("input", (e) => {
+      searchQuery = e.target.value;
+      renderSchool();
+    });
+
+    clearSearch.addEventListener("click", () => {
+      searchQuery = "";
+      searchInput.value = "";
+      renderSchool();
+    });
+
+    // initial render
+    renderSchool();
+  </script>
+
+</body>
+</html>
