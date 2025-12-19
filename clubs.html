@@ -1,0 +1,1188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Tech Clubs – GGSIPU East Delhi Campus</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --bg-body: #040617;
+      --bg-elevated: rgba(15, 23, 42, 0.92);
+      --bg-elevated-soft: rgba(15, 23, 42, 0.75);
+      --accent-1: #00f5ff;
+      --accent-2: #a855f7;
+      --accent-3: #22c55e;
+      --accent-soft: rgba(56, 189, 248, 0.1);
+      --border-subtle: rgba(148, 163, 184, 0.2);
+      --text-main: #e5e7eb;
+      --text-soft: #9ca3af;
+      --danger: #f97373;
+      --radius-lg: 18px;
+      --radius-xl: 22px;
+      --shadow-soft: 0 18px 40px rgba(15, 23, 42, 0.75);
+      --blur-glass: 18px;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      min-height: 100vh;
+      font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+      background:
+        radial-gradient(circle at 0% 0%, rgba(56, 189, 248, 0.08), transparent 45%),
+        radial-gradient(circle at 100% 0%, rgba(168, 85, 247, 0.08), transparent 45%),
+        radial-gradient(circle at 50% 100%, rgba(34, 197, 94, 0.12), transparent 45%),
+        var(--bg-body);
+      color: var(--text-main);
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .page-shell {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 18px 16px 32px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    /* Subtle moving grid / circuit background */
+    .page-shell::before {
+      content: "";
+      position: fixed;
+      inset: -200px;
+      background-image:
+        linear-gradient(rgba(30, 64, 175, 0.16) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(30, 64, 175, 0.16) 1px, transparent 1px);
+      background-size: 50px 50px;
+      opacity: 0.3;
+      mask-image: radial-gradient(circle at 50% 0%, black 0%, transparent 70%);
+      pointer-events: none;
+      z-index: -2;
+      animation: slow-pan 40s linear infinite;
+    }
+
+    @keyframes slow-pan {
+      0% { transform: translate3d(0,0,0); }
+      100% { transform: translate3d(-80px,-40px,0); }
+    }
+
+    header {
+      position: relative;
+      border-radius: 24px;
+      padding: 18px 20px 18px;
+      margin-bottom: 24px;
+      background: radial-gradient(circle at 0% 0%, rgba(34, 197, 94, 0.16), transparent 55%),
+                  radial-gradient(circle at 100% 0%, rgba(56, 189, 248, 0.14), transparent 55%),
+                  linear-gradient(135deg, rgba(15, 23, 42, 0.95), rgba(15, 23, 42, 0.9));
+      border: 1px solid rgba(148, 163, 184, 0.3);
+      box-shadow: var(--shadow-soft);
+      backdrop-filter: blur(var(--blur-glass));
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+    }
+
+    .logo-pill {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 6px 12px;
+      border-radius: 999px;
+      background: rgba(15, 23, 42, 0.7);
+      border: 1px solid rgba(148, 163, 184, 0.4);
+      box-shadow: 0 0 20px rgba(59, 130, 246, 0.15);
+    }
+
+    .logo-pill img {
+      width: 44px;
+      height: 44px;
+      border-radius: 999px;
+      object-fit: cover;
+      border: 1px solid rgba(148, 163, 184, 0.5);
+      background: #020617;
+    }
+
+    .logo-pill span {
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: var(--text-soft);
+      line-height: 1.3;
+    }
+
+    .hero-text {
+      text-align: center;
+      flex: 1;
+    }
+
+    .eyebrow {
+      font-size: 11px;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--accent-1);
+      margin-bottom: 4px;
+    }
+
+    .hero-title {
+      font-family: "Space Grotesk", system-ui, sans-serif;
+      font-size: clamp(1.5rem, 2.4vw + 1rem, 2.4rem);
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      margin-bottom: 4px;
+    }
+
+    .hero-subtitle {
+      font-size: 0.84rem;
+      color: var(--text-soft);
+    }
+
+    .hero-pill-row {
+      margin-top: 10px;
+      display: inline-flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      justify-content: center;
+    }
+
+    .hero-pill {
+      font-size: 0.72rem;
+      padding: 4px 9px;
+      border-radius: 999px;
+      border: 1px solid rgba(148, 163, 184, 0.4);
+      background: rgba(15, 23, 42, 0.8);
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      color: var(--text-soft);
+    }
+
+    .hero-pill-dot {
+      width: 6px;
+      height: 6px;
+      border-radius: 999px;
+      background: var(--accent-1);
+      box-shadow: 0 0 12px rgba(34, 211, 238, 0.9);
+    }
+
+    /* Search + filters bar */
+
+    .toolbar {
+      position: sticky;
+      top: 6px;
+      z-index: 10;
+      margin-bottom: 20px;
+      margin-top: 4px;
+      background: transparent;
+    }
+
+    .toolbar-inner {
+      border-radius: 20px;
+      padding: 10px 14px;
+      background: radial-gradient(circle at 0 0, rgba(56, 189, 248, 0.16), transparent 55%),
+                  rgba(15, 23, 42, 0.9);
+      border: 1px solid rgba(148, 163, 184, 0.4);
+      backdrop-filter: blur(18px);
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      align-items: center;
+      box-shadow: 0 10px 30px rgba(15, 23, 42, 0.85);
+    }
+
+    .search-group {
+      flex: 1 1 220px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 10px;
+      border-radius: 999px;
+      background: rgba(15, 23, 42, 0.85);
+      border: 1px solid rgba(51, 65, 85, 0.9);
+    }
+
+    .search-icon {
+      width: 18px;
+      height: 18px;
+      flex-shrink: 0;
+      opacity: 0.85;
+    }
+
+    .search-input {
+      flex: 1;
+      background: transparent;
+      border: none;
+      outline: none;
+      color: var(--text-main);
+      font-size: 0.86rem;
+    }
+
+    .search-input::placeholder {
+      color: rgba(148, 163, 184, 0.7);
+    }
+
+    .search-meta {
+      font-size: 0.7rem;
+      color: var(--text-soft);
+      padding-left: 2px;
+    }
+
+    .filter-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      align-items: center;
+      justify-content: flex-end;
+    }
+
+    .filter-label {
+      font-size: 0.7rem;
+      color: var(--text-soft);
+      margin-right: 4px;
+    }
+
+    .filter-chip {
+      font-size: 0.7rem;
+      padding: 5px 9px;
+      border-radius: 999px;
+      border: 1px solid rgba(148, 163, 184, 0.5);
+      background: rgba(15, 23, 42, 0.9);
+      color: var(--text-soft);
+      cursor: pointer;
+      transition: all 0.16s ease-out;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .filter-chip span.dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 999px;
+      background: rgba(148, 163, 184, 0.9);
+    }
+
+    .filter-chip[data-filter="ai"] span.dot { background: var(--accent-2); }
+    .filter-chip[data-filter="robotics"] span.dot { background: var(--accent-3); }
+    .filter-chip[data-filter="iot"] span.dot { background: var(--accent-1); }
+
+    .filter-chip.active {
+      border-color: var(--accent-1);
+      color: var(--accent-1);
+      background: rgba(8, 47, 73, 0.85);
+      box-shadow: 0 0 18px rgba(56, 189, 248, 0.35);
+      transform: translateY(-1px);
+    }
+
+    /* Layout for clubs */
+
+    .clubs-shell {
+      position: relative;
+    }
+
+    .clubs-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 18px;
+    }
+
+    .club-card {
+      position: relative;
+      border-radius: var(--radius-lg);
+      background: radial-gradient(circle at 0 0, rgba(56, 189, 248, 0.2), transparent 55%),
+                  radial-gradient(circle at 100% 100%, rgba(168, 85, 247, 0.16), transparent 55%),
+                  var(--bg-elevated);
+      border: 1px solid rgba(148, 163, 184, 0.45);
+      box-shadow: var(--shadow-soft);
+      padding: 14px 14px 12px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      overflow: hidden;
+      transform-origin: center;
+      transition: transform 0.2s ease-out, box-shadow 0.2s ease-out, border-color 0.2s ease-out, background 0.2s ease-out;
+      opacity: 0;
+      transform: translateY(12px) scale(0.98);
+    }
+
+    .club-card.visible {
+      opacity: 1;
+      transform: translateY(0) scale(1);
+      transition: transform 0.22s ease-out, opacity 0.22s ease-out, box-shadow 0.22s ease-out, border-color 0.2s ease-out,
+                  background 0.2s ease-out;
+    }
+
+    .club-card::before {
+      content: "";
+      position: absolute;
+      inset: -40%;
+      opacity: 0;
+      background:
+        conic-gradient(from 180deg, rgba(34, 211, 238, 0.18), transparent 35%, rgba(168, 85, 247, 0.16), transparent 75%, rgba(34, 197, 94, 0.25));
+      mix-blend-mode: screen;
+      transition: opacity 0.2s ease-out;
+      pointer-events: none;
+    }
+
+    .club-card:hover {
+      transform: translateY(-4px) scale(1.01);
+      box-shadow: 0 22px 45px rgba(15, 23, 42, 0.95);
+      border-color: rgba(56, 189, 248, 0.8);
+      background: radial-gradient(circle at 0 0, rgba(56, 189, 248, 0.32), transparent 55%),
+                  radial-gradient(circle at 100% 100%, rgba(168, 85, 247, 0.24), transparent 55%),
+                  var(--bg-elevated-soft);
+    }
+
+    .club-card:hover::before {
+      opacity: 1;
+    }
+
+    .club-header {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .club-logo {
+      width: 42px;
+      height: 42px;
+      border-radius: 14px;
+      padding: 5px;
+      background: rgba(15, 23, 42, 0.95);
+      border: 1px solid rgba(148, 163, 184, 0.6);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .club-logo img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+
+    .club-heading {
+      flex: 1;
+      min-width: 0;
+    }
+
+    .club-name {
+      font-family: "Space Grotesk", system-ui, sans-serif;
+      font-size: 1rem;
+      font-weight: 600;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      margin-bottom: 2px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .club-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 4px;
+    }
+
+    .club-tag {
+      font-size: 0.7rem;
+      padding: 2px 7px;
+      border-radius: 999px;
+      background: rgba(15, 23, 42, 0.95);
+      border: 1px solid rgba(148, 163, 184, 0.6);
+      color: var(--text-soft);
+    }
+
+    .club-id-pill {
+      font-size: 0.7rem;
+      padding: 3px 7px;
+      border-radius: 999px;
+      background: rgba(8, 47, 73, 0.85);
+      border: 1px solid rgba(56, 189, 248, 0.8);
+      color: var(--accent-1);
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      white-space: nowrap;
+    }
+
+    .club-id-pill span.dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 999px;
+      background: var(--accent-1);
+      box-shadow: 0 0 15px rgba(34, 211, 238, 0.8);
+    }
+
+    .club-description {
+      font-size: 0.8rem;
+      color: var(--text-soft);
+      line-height: 1.45;
+    }
+
+    .club-meta {
+      display: grid;
+      grid-template-columns: minmax(0, 1.1fr) minmax(0, 1.1fr);
+      gap: 8px;
+      margin-top: 2px;
+    }
+
+    .meta-block {
+      font-size: 0.74rem;
+      padding: 7px 8px;
+      border-radius: 10px;
+      background: rgba(15, 23, 42, 0.9);
+      border: 1px solid rgba(51, 65, 85, 0.9);
+      position: relative;
+    }
+
+    .meta-label {
+      font-size: 0.68rem;
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+      color: rgba(148, 163, 184, 0.8);
+      margin-bottom: 2px;
+    }
+
+    .meta-text {
+      color: var(--text-main);
+    }
+
+    .meta-text span {
+      color: var(--text-soft);
+    }
+
+    .club-footer-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+      margin-top: 4px;
+    }
+
+    .social-row {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      flex-wrap: wrap;
+    }
+
+    .social-label {
+      font-size: 0.7rem;
+      color: var(--text-soft);
+      margin-right: 2px;
+    }
+
+    .social-link {
+      width: 22px;
+      height: 22px;
+      border-radius: 999px;
+      border: 1px solid rgba(148, 163, 184, 0.7);
+      background: rgba(15, 23, 42, 0.9);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: all 0.18s ease-out;
+    }
+
+    .social-link svg {
+      width: 12px;
+      height: 12px;
+      fill: none;
+      stroke: var(--text-soft);
+      stroke-width: 1.6;
+    }
+
+    .social-link:hover {
+      border-color: var(--accent-1);
+      box-shadow: 0 0 14px rgba(56, 189, 248, 0.8);
+      transform: translateY(-1px);
+    }
+
+    .social-link:hover svg {
+      stroke: var(--accent-1);
+    }
+
+    .photo-strip {
+      display: flex;
+      gap: 6px;
+      flex-wrap: nowrap;
+    }
+
+    .photo-thumb {
+      position: relative;
+      flex: 1;
+      min-width: 0;
+      border-radius: 10px;
+      overflow: hidden;
+      border: 1px solid rgba(51, 65, 85, 0.95);
+      background: radial-gradient(circle at 0 0, rgba(56, 189, 248, 0.25), transparent 60%),
+                  rgba(15, 23, 42, 0.96);
+    }
+
+    .photo-thumb img {
+      width: 100%;
+      height: 60px;
+      object-fit: cover;
+      display: block;
+      opacity: 0.92;
+      transition: transform 0.2s ease-out, opacity 0.2s ease-out;
+    }
+
+    .club-card:hover .photo-thumb img {
+      transform: scale(1.05);
+      opacity: 1;
+    }
+
+    .photo-chip {
+      position: absolute;
+      left: 6px;
+      bottom: 6px;
+      font-size: 0.65rem;
+      padding: 3px 7px;
+      border-radius: 999px;
+      background: rgba(15, 23, 42, 0.85);
+      border: 1px solid rgba(148, 163, 184, 0.7);
+      color: var(--text-soft);
+      backdrop-filter: blur(8px);
+    }
+
+    .empty-state {
+      text-align: center;
+      margin-top: 34px;
+      font-size: 0.9rem;
+      color: var(--text-soft);
+    }
+
+    .empty-state span {
+      color: var(--accent-1);
+    }
+
+    .meta-count {
+      font-size: 0.7rem;
+      color: var(--text-soft);
+      margin-top: 8px;
+      text-align: right;
+    }
+
+    /* Scroll-to-top button */
+
+    .to-top {
+      position: fixed;
+      right: 20px;
+      bottom: 18px;
+      width: 38px;
+      height: 38px;
+      border-radius: 999px;
+      border: 1px solid rgba(148, 163, 184, 0.65);
+      background: radial-gradient(circle at 50% 0, rgba(56, 189, 248, 0.32), transparent 60%),
+                  rgba(15, 23, 42, 0.96);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      box-shadow: 0 14px 30px rgba(15, 23, 42, 0.95);
+      opacity: 0;
+      transform: translateY(12px);
+      pointer-events: none;
+      transition: all 0.2s ease-out;
+      z-index: 50;
+    }
+
+    .to-top.visible {
+      opacity: 1;
+      transform: translateY(0);
+      pointer-events: auto;
+    }
+
+    .to-top svg {
+      width: 18px;
+      height: 18px;
+      stroke: var(--accent-1);
+      stroke-width: 1.7;
+      fill: none;
+    }
+
+    /* Responsive tweaks */
+
+    @media (max-width: 768px) {
+      header {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 10px;
+        padding: 14px 14px 16px;
+      }
+
+      .logo-pill {
+        width: 100%;
+        justify-content: flex-start;
+      }
+
+      .logo-pill span {
+        font-size: 10px;
+      }
+
+      .toolbar-inner {
+        padding: 10px 10px;
+      }
+
+      .club-meta {
+        grid-template-columns: minmax(0, 1fr);
+      }
+    }
+
+    @media (max-width: 480px) {
+      .hero-title {
+        font-size: 1.35rem;
+      }
+
+      .clubs-grid {
+        grid-template-columns: minmax(0, 1fr);
+      }
+
+      .photo-thumb img {
+        height: 56px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="page-shell">
+    <!-- HEADER -->
+    <header>
+      <!-- Left GGSIPU Logo -->
+      <div class="logo-pill">
+        <img src="ggsipu-logo-left.png" alt="GGSIPU Logo Left">
+        <span>Guru Gobind Singh Indraprastha University<br>East Delhi Campus</span>
+      </div>
+
+      <!-- Center title -->
+      <div class="hero-text">
+        <div class="eyebrow">Tech • AI • Robotics • IoT</div>
+        <div class="hero-title">Student Tech Clubs Hub</div>
+        <div class="hero-subtitle">
+          Discover every technology club at GGSIPU EDC – connect with student leaders, explore domains,
+          and plug into the university’s innovation ecosystem.
+        </div>
+        <div class="hero-pill-row">
+          <div class="hero-pill">
+            <span class="hero-pill-dot"></span>
+            Future-ready ecosystem
+          </div>
+          <div class="hero-pill">
+            <span class="hero-pill-dot"></span>
+            AI, Robotics & IoT initiatives
+          </div>
+          <div class="hero-pill">
+            <span class="hero-pill-dot"></span>
+            Open to all enthusiastic students
+          </div>
+        </div>
+      </div>
+
+      <!-- Right GGSIPU Logo -->
+      <div class="logo-pill">
+        <img src="ggsipu-logo-right.png" alt="GGSIPU Logo Right">
+        <span>Directorate of Students Welfare<br>Tech & Innovation Clubs</span>
+      </div>
+    </header>
+
+    <!-- TOOLBAR (search + filters) -->
+    <div class="toolbar">
+      <div class="toolbar-inner">
+        <div class="search-group">
+          <svg class="search-icon" viewBox="0 0 24 24">
+            <circle cx="11" cy="11" r="6.5" stroke="#94a3b8" stroke-width="1.6" fill="none" />
+            <line x1="15.5" y1="15.5" x2="20" y2="20" stroke="#94a3b8" stroke-width="1.6" stroke-linecap="round" />
+          </svg>
+          <input
+            id="searchInput"
+            class="search-input"
+            type="text"
+            placeholder="Search by club name, domain, faculty coordinator or keywords (e.g., AI, robotics, web)..."
+          />
+        </div>
+        <div class="search-meta">
+          Tip: Use keywords like <strong>“AI”</strong>, <strong>“IoT”</strong>, <strong>“Coding”</strong> to quickly filter clubs.
+        </div>
+
+        <div class="filter-row">
+          <div class="filter-label">Quick filters:</div>
+          <button class="filter-chip active" data-filter="all">
+            <span class="dot"></span> All
+          </button>
+          <button class="filter-chip" data-filter="ai">
+            <span class="dot"></span> AI / ML
+          </button>
+          <button class="filter-chip" data-filter="robotics">
+            <span class="dot"></span> Robotics
+          </button>
+          <button class="filter-chip" data-filter="iot">
+            <span class="dot"></span> IoT / Hardware
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- CLUBS GRID -->
+    <main class="clubs-shell">
+      <div id="clubsGrid" class="clubs-grid">
+        <!-- Example clubs – replace text + image URLs as needed -->
+
+        <!-- AI & Robotics Club -->
+        <article
+          class="club-card"
+          data-name="AI & Robotics Club"
+          data-tags="ai ml robotics computer vision deep learning automation research"
+          data-category="ai,robotics"
+        >
+          <div class="club-header">
+            <div class="club-logo">
+              <img src="ai-robotics-logo.png" alt="AI & Robotics Club Logo">
+            </div>
+            <div class="club-heading">
+              <div class="club-name">AI & Robotics Club</div>
+              <div class="club-tags">
+                <span class="club-tag">Machine Learning</span>
+                <span class="club-tag">Computer Vision</span>
+                <span class="club-tag">Robotics</span>
+              </div>
+            </div>
+            <div class="club-id-pill">
+              <span class="dot"></span>
+              AIRC • GGSIPU
+            </div>
+          </div>
+
+          <p class="club-description">
+            The AI & Robotics Club builds intelligent machines – from vision-based robots to autonomous systems.
+            Students work on real datasets, participate in hackathons and contribute to research-driven projects.
+          </p>
+
+          <div class="club-meta">
+            <div class="meta-block">
+              <div class="meta-label">Faculty Coordinator</div>
+              <div class="meta-text">
+                Dr. Example Faculty<br>
+                <span>Associate Professor, AI & DS</span>
+              </div>
+            </div>
+            <div class="meta-block">
+              <div class="meta-label">Student Office Bearers</div>
+              <div class="meta-text">
+                President: Ritwick Johari<br>
+                <span>Vice President: Student Name</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="club-footer-row">
+            <div class="social-row">
+              <span class="social-label">Connect:</span>
+              <a class="social-link" href="https://instagram.com" target="_blank" aria-label="Instagram">
+                <!-- Instagram -->
+                <svg viewBox="0 0 24 24">
+                  <rect x="4" y="4" width="16" height="16" rx="4"></rect>
+                  <circle cx="12" cy="12" r="4"></circle>
+                  <circle cx="17" cy="7" r="1.1"></circle>
+                </svg>
+              </a>
+              <a class="social-link" href="https://linkedin.com" target="_blank" aria-label="LinkedIn">
+                <!-- LinkedIn -->
+                <svg viewBox="0 0 24 24">
+                  <rect x="4" y="4" width="4" height="14"></rect>
+                  <circle cx="6" cy="7" r="1"></circle>
+                  <path d="M11 10h3a3 3 0 0 1 3 3v5h-4v-4.5c0-.8-.4-1.3-1.1-1.3-.7 0-1.4.5-1.4 1.3V18H11z"></path>
+                </svg>
+              </a>
+              <a class="social-link" href="mailto:airc@example.edu" aria-label="Mail">
+                <!-- Mail -->
+                <svg viewBox="0 0 24 24">
+                  <rect x="4" y="6" width="16" height="12" rx="2"></rect>
+                  <polyline points="5 7 12 12 19 7"></polyline>
+                </svg>
+              </a>
+            </div>
+            <div class="photo-strip">
+              <div class="photo-thumb">
+                <img src="ai-robotics-event1.jpg" alt="AI & Robotics Club Event">
+                <div class="photo-chip">Workshop</div>
+              </div>
+              <div class="photo-thumb">
+                <img src="ai-robotics-event2.jpg" alt="AI & Robotics Club Robotics Demo">
+                <div class="photo-chip">Robot Demo</div>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- Web & Open Source Club -->
+        <article
+          class="club-card"
+          data-name="Web & Open Source Club"
+          data-tags="web development javascript open source git ui ux cloud devops"
+          data-category="ai"
+        >
+          <div class="club-header">
+            <div class="club-logo">
+              <img src="web-club-logo.png" alt="Web & Open Source Club Logo">
+            </div>
+            <div class="club-heading">
+              <div class="club-name">Web & Open Source Club</div>
+              <div class="club-tags">
+                <span class="club-tag">Web Dev</span>
+                <span class="club-tag">Open Source</span>
+                <span class="club-tag">Cloud</span>
+              </div>
+            </div>
+            <div class="club-id-pill">
+              <span class="dot"></span>
+              WOSC • GGSIPU
+            </div>
+          </div>
+
+          <p class="club-description">
+            The Web & Open Source Club empowers students to build production-grade web apps, contribute to GitHub
+            projects and explore modern stacks like React, Go, Node, and cloud-native architectures.
+          </p>
+
+          <div class="club-meta">
+            <div class="meta-block">
+              <div class="meta-label">Faculty Coordinator</div>
+              <div class="meta-text">
+                Dr. Web Mentor<br>
+                <span>Assistant Professor, CSE</span>
+              </div>
+            </div>
+            <div class="meta-block">
+              <div class="meta-label">Student Office Bearers</div>
+              <div class="meta-text">
+                President: Student Name<br>
+                <span>General Secretary: Student Name</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="club-footer-row">
+            <div class="social-row">
+              <span class="social-label">Connect:</span>
+              <a class="social-link" href="https://instagram.com" target="_blank" aria-label="Instagram">
+                <svg viewBox="0 0 24 24">
+                  <rect x="4" y="4" width="16" height="16" rx="4"></rect>
+                  <circle cx="12" cy="12" r="4"></circle>
+                  <circle cx="17" cy="7" r="1.1"></circle>
+                </svg>
+              </a>
+              <a class="social-link" href="https://github.com" target="_blank" aria-label="GitHub">
+                <!-- GitHub (outline) -->
+                <svg viewBox="0 0 24 24">
+                  <path d="M9 19c-4 1.3-4-2.3-6-2.8M15 21v-3.1c0-.9-.3-1.5-.7-1.9 2.3-.3 4.7-1.1 4.7-5 
+                           0-1-.3-1.8-.9-2.6.1-.3.4-1.2-.1-2.5 0 0-.8-.3-2.7 1a9.3 9.3 0 0 0-4.7 0c-2-1.3-2.8-1-2.8-1
+                           -.5 1.3-.2 2.2-.1 2.5-.6.8-.9 1.6-.9 2.6 0 3.9 2.4 4.7 4.7 5-.3.3-.5.8-.6 1.5" 
+                        stroke="#94a3b8" stroke-width="1.6" fill="none" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+              </a>
+              <a class="social-link" href="mailto:webclub@example.edu" aria-label="Mail">
+                <svg viewBox="0 0 24 24">
+                  <rect x="4" y="6" width="16" height="12" rx="2"></rect>
+                  <polyline points="5 7 12 12 19 7"></polyline>
+                </svg>
+              </a>
+            </div>
+            <div class="photo-strip">
+              <div class="photo-thumb">
+                <img src="web-club-hackathon.jpg" alt="Web Club Hackathon">
+                <div class="photo-chip">Hackathon</div>
+              </div>
+              <div class="photo-thumb">
+                <img src="web-club-session.jpg" alt="Web Club Session">
+                <div class="photo-chip">Code Lab</div>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- IoT & Embedded Systems Club -->
+        <article
+          class="club-card"
+          data-name="IoT & Embedded Systems Club"
+          data-tags="iot embedded hardware sensors edge computing automation electronics"
+          data-category="iot"
+        >
+          <div class="club-header">
+            <div class="club-logo">
+              <img src="iot-club-logo.png" alt="IoT & Embedded Systems Club Logo">
+            </div>
+            <div class="club-heading">
+              <div class="club-name">IoT & Embedded Systems Club</div>
+              <div class="club-tags">
+                <span class="club-tag">IoT</span>
+                <span class="club-tag">Embedded</span>
+                <span class="club-tag">Edge</span>
+              </div>
+            </div>
+            <div class="club-id-pill">
+              <span class="dot"></span>
+              IESC • GGSIPU
+            </div>
+          </div>
+
+          <p class="club-description">
+            The IoT & Embedded Systems Club connects hardware with intelligence – from sensor networks and
+            microcontrollers to edge AI deployments for smart campus and smart city solutions.
+          </p>
+
+          <div class="club-meta">
+            <div class="meta-block">
+              <div class="meta-label">Faculty Coordinator</div>
+              <div class="meta-text">
+                Dr. IoT Mentor<br>
+                <span>Assistant Professor, ECE</span>
+              </div>
+            </div>
+            <div class="meta-block">
+              <div class="meta-label">Student Office Bearers</div>
+              <div class="meta-text">
+                President: Student Name<br>
+                <span>Technical Head: Student Name</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="club-footer-row">
+            <div class="social-row">
+              <span class="social-label">Connect:</span>
+              <a class="social-link" href="https://instagram.com" target="_blank" aria-label="Instagram">
+                <svg viewBox="0 0 24 24">
+                  <rect x="4" y="4" width="16" height="16" rx="4"></rect>
+                  <circle cx="12" cy="12" r="4"></circle>
+                  <circle cx="17" cy="7" r="1.1"></circle>
+                </svg>
+              </a>
+              <a class="social-link" href="https://linkedin.com" target="_blank" aria-label="LinkedIn">
+                <svg viewBox="0 0 24 24">
+                  <rect x="4" y="4" width="4" height="14"></rect>
+                  <circle cx="6" cy="7" r="1"></circle>
+                  <path d="M11 10h3a3 3 0 0 1 3 3v5h-4v-4.5c0-.8-.4-1.3-1.1-1.3-.7 0-1.4.5-1.4 1.3V18H11z"></path>
+                </svg>
+              </a>
+              <a class="social-link" href="mailto:iotclub@example.edu" aria-label="Mail">
+                <svg viewBox="0 0 24 24">
+                  <rect x="4" y="6" width="16" height="12" rx="2"></rect>
+                  <polyline points="5 7 12 12 19 7"></polyline>
+                </svg>
+              </a>
+            </div>
+            <div class="photo-strip">
+              <div class="photo-thumb">
+                <img src="iot-lab.jpg" alt="IoT Lab Showcase">
+                <div class="photo-chip">Lab Build</div>
+              </div>
+              <div class="photo-thumb">
+                <img src="iot-demo.jpg" alt="IoT Demo">
+                <div class="photo-chip">Live Demo</div>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- Cybersecurity & Blockchain Club -->
+        <article
+          class="club-card"
+          data-name="Cybersecurity & Blockchain Club"
+          data-tags="cybersecurity blockchain web3 cryptography security ctf"
+          data-category="ai"
+        >
+          <div class="club-header">
+            <div class="club-logo">
+              <img src="cyber-club-logo.png" alt="Cybersecurity & Blockchain Club Logo">
+            </div>
+            <div class="club-heading">
+              <div class="club-name">Cybersecurity & Blockchain Club</div>
+              <div class="club-tags">
+                <span class="club-tag">Cyber Security</span>
+                <span class="club-tag">Blockchain</span>
+                <span class="club-tag">CTF</span>
+              </div>
+            </div>
+            <div class="club-id-pill">
+              <span class="dot"></span>
+              CBC • GGSIPU
+            </div>
+          </div>
+
+          <p class="club-description">
+            This club focuses on ethical hacking, CTFs, threat modeling and decentralized technologies.
+            Members learn security fundamentals and experiment with smart contracts and Web3.
+          </p>
+
+          <div class="club-meta">
+            <div class="meta-block">
+              <div class="meta-label">Faculty Coordinator</div>
+              <div class="meta-text">
+                Dr. Security Mentor<br>
+                <span>Assistant Professor, CSE</span>
+              </div>
+            </div>
+            <div class="meta-block">
+              <div class="meta-label">Student Office Bearers</div>
+              <div class="meta-text">
+                President: Student Name<br>
+                <span>Event Lead: Student Name</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="club-footer-row">
+            <div class="social-row">
+              <span class="social-label">Connect:</span>
+              <a class="social-link" href="https://instagram.com" target="_blank" aria-label="Instagram">
+                <svg viewBox="0 0 24 24">
+                  <rect x="4" y="4" width="16" height="16" rx="4"></rect>
+                  <circle cx="12" cy="12" r="4"></circle>
+                  <circle cx="17" cy="7" r="1.1"></circle>
+                </svg>
+              </a>
+              <a class="social-link" href="https://linkedin.com" target="_blank" aria-label="LinkedIn">
+                <svg viewBox="0 0 24 24">
+                  <rect x="4" y="4" width="4" height="14"></rect>
+                  <circle cx="6" cy="7" r="1"></circle>
+                  <path d="M11 10h3a3 3 0 0 1 3 3v5h-4v-4.5c0-.8-.4-1.3-1.1-1.3-.7 0-1.4.5-1.4 1.3V18H11z"></path>
+                </svg>
+              </a>
+              <a class="social-link" href="mailto:cyberclub@example.edu" aria-label="Mail">
+                <svg viewBox="0 0 24 24">
+                  <rect x="4" y="6" width="16" height="12" rx="2"></rect>
+                  <polyline points="5 7 12 12 19 7"></polyline>
+                </svg>
+              </a>
+            </div>
+            <div class="photo-strip">
+              <div class="photo-thumb">
+                <img src="cyber-ctf.jpg" alt="Cyber CTF Event">
+                <div class="photo-chip">CTF</div>
+              </div>
+              <div class="photo-thumb">
+                <img src="cyber-session.jpg" alt="Cybersecurity Session">
+                <div class="photo-chip">Workshop</div>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- Add more club-card blocks as needed -->
+      </div>
+
+      <div id="emptyState" class="empty-state" style="display:none;">
+        No club matches <span>your search</span>. Try a different keyword or remove filters.
+      </div>
+
+      <div id="metaCount" class="meta-count">
+        Showing <span id="visibleCount">0</span> clubs
+      </div>
+    </main>
+
+    <!-- Scroll to Top -->
+    <button class="to-top" id="toTopBtn" aria-label="Scroll to top">
+      <svg viewBox="0 0 24 24">
+        <polyline points="6 14 12 8 18 14"></polyline>
+      </svg>
+    </button>
+  </div>
+
+  <script>
+    (function () {
+      const searchInput = document.getElementById("searchInput");
+      const clubsGrid = document.getElementById("clubsGrid");
+      const cards = Array.from(document.querySelectorAll(".club-card"));
+      const filterChips = Array.from(document.querySelectorAll(".filter-chip"));
+      const emptyState = document.getElementById("emptyState");
+      const visibleCountSpan = document.getElementById("visibleCount");
+      const toTopBtn = document.getElementById("toTopBtn");
+
+      let activeFilter = "all";
+
+      function normalize(str) {
+        return (str || "").toString().toLowerCase();
+      }
+
+      function applyFilters() {
+        const query = normalize(searchInput.value.trim());
+        let visibleCount = 0;
+
+        cards.forEach(card => {
+          const name = normalize(card.dataset.name);
+          const tags = normalize(card.dataset.tags);
+          const category = card.dataset.category || "";
+          const combined = name + " " + tags;
+
+          const matchesQuery = !query || combined.includes(query);
+          const matchesFilter =
+            activeFilter === "all" ||
+            (category && category.split(",").map(s => s.trim()).includes(activeFilter));
+
+          const show = matchesQuery && matchesFilter;
+
+          card.style.display = show ? "flex" : "none";
+          if (show) visibleCount++;
+        });
+
+        visibleCountSpan.textContent = visibleCount.toString();
+        emptyState.style.display = visibleCount === 0 ? "block" : "none";
+      }
+
+      searchInput.addEventListener("input", applyFilters);
+
+      filterChips.forEach(chip => {
+        chip.addEventListener("click", () => {
+          filterChips.forEach(c => c.classList.remove("active"));
+          chip.classList.add("active");
+          activeFilter = chip.dataset.filter || "all";
+          applyFilters();
+        });
+      });
+
+      // Scroll to top button visibility
+      window.addEventListener("scroll", () => {
+        if (window.scrollY > 260) {
+          toTopBtn.classList.add("visible");
+        } else {
+          toTopBtn.classList.remove("visible");
+        }
+      });
+
+      toTopBtn.addEventListener("click", () => {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      });
+
+      // Intersection Observer for entrance animation
+      const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("visible");
+            observer.unobserve(entry.target);
+          }
+        });
+      }, {
+        threshold: 0.18
+      });
+
+      cards.forEach(card => observer.observe(card));
+
+      // Initial count
+      applyFilters();
+    })();
+  </script>
+</body>
+</html>
